@@ -1,0 +1,41 @@
+html {
+    font-family: Inter;
+    color: #444;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section,
+footer {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    scroll-snap-align: start;
+}
+
+section:nth-of-type(even) {
+    background: palegoldenrod;
+}
+
+footer {
+    background: #444;
+    color: white;
+}
