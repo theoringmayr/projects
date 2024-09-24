@@ -64,14 +64,10 @@ li:hover {
 }
 
 @container (max-width: 400px) {
-    li {
-        background: red;
-    }
 
     ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background: yellowgreen;
     }
 
 }
