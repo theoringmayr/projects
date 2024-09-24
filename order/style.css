@@ -94,7 +94,7 @@ p {
 
     section {
         padding: 1rem;
-        gap: 2.5rem;
+        row-gap: 2.5rem;
     }
 
     .w-3,
