@@ -68,12 +68,11 @@ section {
     cursor: pointer;
 }
 
-.original:hover {
+.original p:hover {
     outline: 2px solid lightblue;
     outline-offset: 0.5rem;
     border-radius: 0.5rem;
 }
-
 
 .SUMMARY {
     background: violet;

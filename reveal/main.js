@@ -10,4 +10,9 @@ originalText.forEach(element => {
     });
 });
 
-console.log("siuuuu");
+simpleText.forEach(element => {
+    element.addEventListener("click", () => {
+        element.classList.toggle("show");
+    });
+});
+
