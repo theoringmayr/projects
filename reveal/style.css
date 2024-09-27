@@ -1,0 +1,105 @@
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: Inter variable;
+    font-family: Literata;
+}
+
+p {
+    text-wrap: pretty;
+    line-height: 1.5;
+    max-width: 60ch;
+    margin-bottom: 1.5em;
+}
+
+#p1:first-of-type:first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: 1;
+    margin-right: 0.125em;
+    font-weight: 500;
+}
+
+section {
+    display: grid;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.translation {
+    font-style: italic;
+    border-left: 2px solid;
+    padding-left: 1.25rem;
+
+    cursor: pointer;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transform: translateY(-2rem);
+
+    transition-property: grid-template-rows opacity transform;
+    transition-duration: 0.3s;
+
+    >div {
+        overflow: hidden;
+    }
+}
+
+.translation.show {
+    transform: translateY(0);
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin-bottom: 3em;
+}
+
+.translation p:last-of-type {
+    margin: 0;
+}
+
+
+.original {
+    position: relative;
+    cursor: pointer;
+}
+
+.original:hover {
+    outline: 2px solid lightblue;
+    outline-offset: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.SUMMARY {
+    background: violet;
+    display: none;
+
+}
+
+/* Baseline Grid 
+
+main::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+
+    pointer-events: none;
+    background-size: 100% 1em;
+    background-image: -webkit-linear-gradient(red 1px, transparent 1px);
+} */
+
+@media screen and (max-width: 800px) {
+
+    section {
+        padding-inline: 0.75rem;
+    }
+
+}
