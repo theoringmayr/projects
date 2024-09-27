@@ -44,6 +44,7 @@ li {
     transition: background-color 0.2s ease-in;
     cursor: pointer;
 
+
     a {
         position: absolute;
         inset: 0;
@@ -51,11 +52,13 @@ li {
         width: 100%;
         display: grid;
         place-content: center;
+        justify-content: center;
         gap: 0.5rem;
         text-align: center;
         text-decoration: none;
         color: inherit;
         font-weight: 500;
+        padding: 1.5rem;
     }
 }
 
