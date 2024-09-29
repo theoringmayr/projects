@@ -1,0 +1,57 @@
+* {
+    font-family: Inter variable;
+}
+
+body {
+    background: black !important;
+}
+
+svg.icon {
+    height: 2em;
+    width: 2em;
+}
+
+svg path {
+    fill: currentColor;
+}
+
+.container {
+    max-width: 1200px !important;
+}
+
+.hero {
+    isolation: isolate;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2000px;
+    width: 2400px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse at center, hsl(260deg 78% 35% / 40%), transparent 60%);
+    z-index: -1;
+}
+
+.gradient {
+    isolation: isolate;
+}
+
+section {
+    position: relative !important;
+    overflow-x: clip;
+}
+
+.gradient::after {
+    content: '';
+    position: absolute;
+    height: 1500px;
+    width: 1500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(ellipse at center, hsl(280deg 78% 30% / 30%), transparent 60%);
+    z-index: -1;
+}
