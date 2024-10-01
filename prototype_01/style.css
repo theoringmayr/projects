@@ -1,0 +1,141 @@
+/* Custom Global Styles and Utility Classes */
+:root{
+    --font-serif: 'Literata', serif;
+}
+
+html[data-bs-theme="dark"]{
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+p{
+    text-wrap: pretty;
+}
+
+.small-caps{
+    font-variant: all-small-caps;
+}
+
+/* Layout and Behavior */
+
+main{
+    min-height: 100vh;
+    margin-top: 1.5rem;
+
+    font-size: 125%;
+    font-family: var(--font-serif);
+}
+
+#book-content > div {
+    display: grid;
+}
+
+.original{
+    order: 1;
+    opacity: 0;
+    display: grid;
+
+    border-left: 2px solid;
+    padding-left: 1rem;
+
+    font-style: italic;
+
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows opacity;
+    transition-duration: 0.3s;
+    
+    > p, > h3{
+        overflow: hidden;
+        margin: 0;
+    }
+}
+
+.show .original{
+   grid-template-rows: 1fr;
+   opacity: 0.75;
+   display: grid;
+   margin-bottom: 1.5em;
+}
+
+.translation{
+    order: 0;
+    position: relative;
+
+    p > span{
+        display: block;
+        margin-bottom: 1em;
+    }
+}
+
+.chapter-title .original{
+    margin: 0;
+}
+
+.chapter-title h3 {
+    margin: 0;
+}
+
+.custom-popover {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: var(--bs-emphasis-color);
+    --bs-popover-header-bg: var(--bs-primary);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+  }
+
+/* Bootstrap lg Breakpoint */
+@media screen and (min-width: 992px) {
+  
+    #book-content > div {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        cursor: unset;
+    }
+
+    .translation{
+        order: 2;
+    }
+
+    .show .original{
+        margin: 0;
+    }
+
+    .original{
+        order: 1;
+        display: block !important;
+        opacity: 0.7;
+        margin-bottom: 0;
+
+        border-left: unset;
+        padding-left: unset;
+
+        > p {
+            margin-bottom: 1em;
+        }
+
+    }
+
+
+    /* Range Input and Aside Element */
+
+    input[type="range"]{
+        width: 60%;
+        margin-inline: auto;
+        cursor: pointer;
+    }
+
+    [data-bs-theme=dark] aside {
+        background-color: var(--bs-dark);
+    }
+
+    /* Disable streched link over the translation element */
+    .stretched-link{
+        display: none;
+    }
+}
+
+
+/* --bs-primary
+--bs-primary-rgb */
