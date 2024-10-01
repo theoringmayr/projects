@@ -6,6 +6,8 @@
 html[data-bs-theme="dark"]{
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
+
+    scroll-padding: 1rem;
 }
 
 p{
@@ -22,7 +24,7 @@ main{
     min-height: 100vh;
     margin-top: 1.5rem;
 
-    font-size: 125%;
+    font-size: 110%;
     font-family: var(--font-serif);
 }
 
