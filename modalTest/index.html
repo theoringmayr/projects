@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modal Test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="paragraph">
+        <div class="original">
+          <p>
+            Call me Ishmael. Some years ago—never mind how long precisely—having
+            little or no money in my purse, and nothing particular to interest
+            me on shore, I thought I would sail about a little and see the
+            watery part of the world. It is a way I have of driving off the
+            spleen and regulating the circulation. Whenever I find myself
+            growing grim about the mouth; whenever it is a damp, drizzly
+            November in my soul; whenever I find myself involuntarily pausing
+            before coffin warehouses, and bringing up the rear of every funeral
+            I meet; and especially whenever my hypos get such an upper hand of
+            me, that it requires a strong moral principle to prevent me from
+            deliberately stepping into the street, and methodically knocking
+            people’s hats off—then, I account it high time to get to sea as soon
+            as I can. This is my substitute for pistol and ball. With a
+            philosophical flourish Cato throws himself upon his sword; I quietly
+            take to the ship. There is nothing surprising in this. If they but
+            knew it, almost all men in their degree, some time or other, cherish
+            very nearly the same feelings towards the ocean with me.
+          </p>
+        </div>
+        <div class="translation">
+          <p>
+            <span
+              >There now is your insular city of the Manhattoes, belted round by
+              wharves as Indian isles by coral reefs—commerce surrounds it with
+              her surf. Right and left, the streets take you waterward. Its
+              extreme downtown is the battery, where that noble mole is washed
+              by waves, and cooled by breezes, which a few hours previous were
+              out of sight of land. Look at the crowds of water-gazers
+              there.</span
+            >
+
+            <span
+              >Circumambulate the city of a dreamy Sabbath afternoon. Go from
+              Corlears Hook to Coenties Slip, and from thence, by Whitehall,
+              northward. What do you see?—Posted like silent sentinels all
+              around the town, stand thousands upon thousands of mortal men
+              fixed in ocean reveries. Some leaning against the spiles; some
+              seated upon the pier-heads; some looking over the bulwarks of
+              ships from China; some high aloft in the rigging, as if striving
+              to get a still better seaward peep. But these are all landsmen; of
+              week days pent up in lath and plaster—tied to counters, nailed to
+              benches, clinched to desks. How then is this? Are the green fields
+              gone? What do they here?</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="paragraph">
+        <div class="original">
+          <p>
+            It was a Saturday night, and such a Sabbath as followed! Ex officio
+            professors of Sabbath breaking are all whalemen. The ivory Pequod
+            was turned into what seemed a shamble; every sailor a butcher. You
+            would have thought we were offering up ten thousand red oxen to the
+            sea gods.
+          </p>
+        </div>
+        <div class="translation">
+          <p>
+            In the first place, the enormous cutting tackles, among other
+            ponderous things comprising a cluster of blocks generally painted
+            green, and which no single man can possibly lift—this vast bunch of
+            grapes was swayed up to the main-top and firmly lashed to the lower
+            mast-head, the strongest point anywhere above a ship’s deck. The end
+            of the hawser-like rope winding through these intricacies, was then
+            conducted to the windlass, and the huge lower block of the tackles
+            was swung over the whale; to this block the great blubber hook,
+            weighing some one hundred pounds, was attached. And now suspended in
+            stages over the side, Starbuck and Stubb, the mates, armed with
+            their long spades, began cutting a hole in the body for the
+            insertion of the hook just above the nearest of the two side-fins.
+            This done, a broad, semicircular line is cut round the hole, the
+            hook is inserted, and the main body of the crew striking up a wild
+            chorus, now commence heaving in one dense crowd at the windlass.
+            When instantly, the entire ship careens over on her side; every bolt
+            in her starts like the nail-heads of an old house in frosty weather;
+            she trembles, quivers, and nods her frighted mast-heads to the sky.
+            More and more she leans over to the whale, while every gasping heave
+            of the windlass is answered by a helping heave from the billows;
+            till at last, a swift, startling snap is heard; with a great swash
+            the ship rolls upwards and backwards from the whale, and the
+            triumphant tackle rises into sight dragging after it the disengaged
+            semicircular end of the first strip of blubber. Now as the blubber
+            envelopes the whale precisely as the rind does an orange, so is it
+            stripped off from the body precisely as an orange is sometimes
+            stripped by spiralizing it. For the strain constantly kept up by the
+            windlass continually keeps the whale rolling over and over in the
+            water, and as the blubber in one strip uniformly peels off along the
+            line called the “scarf,” simultaneously cut by the spades of
+            Starbuck and Stubb, the mates; and just as fast as it is thus peeled
+            off, and indeed by that very act itself, it is all the time being
+            hoisted higher and higher aloft till its upper end grazes the
+            main-top; the men at the windlass then cease heaving, and for a
+            moment or two the prodigious blood-dripping mass sways to and fro as
+            if let down from the sky, and every one present must take good heed
+            to dodge it when it swings, else it may box his ears and pitch him
+            headlong overboard.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Modal -->
+    <div class="modal fade" tabindex="-1" id="myModal">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Original Text</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            <span>This is my sick modal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

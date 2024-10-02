@@ -1,0 +1,7 @@
+.original{
+    display: none;
+}
+
+.paragraph.active{
+    background: red;
+}
