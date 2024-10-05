@@ -1,0 +1,51 @@
+:root {
+    --content-width: 1440px;
+}
+
+html {
+    font-family: Hubot-sans;
+    font-feature-settings: 'ss01';
+}
+
+
+
+h1,
+h2,
+h3 {
+    font-family: "Hubot-sans";
+    font-stretch: condensed;
+    font-weight: 900 !important;
+}
+
+/* GENERAL */
+
+/* COMPONENTS */
+
+nav {
+    max-width: var(--content-width) !important;
+    margin-inline: auto;
+    padding: 2.5rem;
+}
+
+article h2 {
+    font-size: 15rem;
+    line-height: 1;
+}
+
+.slideIn {
+    animation: slideIn linear backwards;
+    animation-timeline: view();
+    animation-range: entry 60% cover 25%;
+}
+
+@keyframes slideIn {
+
+    from {
+        transform: translateY(8rem);
+    }
+
+    to {
+        transform: translateY(0rem);
+    }
+
+}
