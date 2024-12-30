@@ -15,14 +15,14 @@
   </head>
   <body>
     <!-- Navigation - Modal Navigation? -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
+    <nav class="navbar navbar-expand-lg bg-light py-4">
       <div class="d-flex align-items-center">
-        <a class="navbar-brand text-uppercase fs-6" href="#"
+        <a class="navbar-brand text-uppercase fs-6 fw-medium" href="#"
           >Edition Leichte Sprache</a
         >
 
         <!-- Mobile Nav Toggle -->
-        <button
+        <!-- <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -32,10 +32,50 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-primary d-block d-lg-none"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          = Menu
         </button>
 
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog bg-primary">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Menu</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">Hello world!</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Menu Items - Show as modal on mobile? -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"
@@ -46,9 +86,46 @@
               <a class="nav-link" href="#">Über unsere Bücher</a>
             </li>
           </ul>
-        </div>
+        </div> -->
+        <!-- ENDS HERE -->
       </div>
     </nav>
+
+    <!-- Modal for mobile -->
+    <div
+      class="modal fade"
+      id="mobileNavModal"
+      tabindex="-1"
+      aria-labelledby="mobileNavModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mobileNavModalLabel">Navigation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main class="d-grid gap-4 gap-md-5 mt-3 mt-md-5">
       <!-- Main Content -->
@@ -58,7 +135,7 @@
         <div>
           <!-- Hero Card -->
           <div
-            class="p-4 p-sm-5 p-md-8 position-relative d-flex flex-column justify-content-center border"
+            class="p-4 py-6 p-sm-5 p-md-8 py-md-10 position-relative d-flex flex-column justify-content-center border"
           >
             <!-- Text -->
             <div class="d-grid gap-3 max-w-640">
@@ -86,7 +163,7 @@
             <img
               src="images/heroimage2.png"
               alt=""
-              class="position-absolute top-50 end-0 translate-middle-y w-25 h-auto"
+              class="d-none d-md-block position-absolute top-50 end-0 translate-middle-y w-25 h-auto"
             />
           </div>
         </div>
@@ -119,7 +196,6 @@
               <div class="d-grid gap-1">
                 <h3 class="fs-6">Die Verwandlung</h3>
                 <p class="fs-6">Franz Kafka</p>
-                <p class="fs-6">4,99$ (optional)</p>
               </div>
             </a>
 
@@ -145,7 +221,6 @@
                   Vorlesungen zur Einführung in die Psychoanalyse
                 </h3>
                 <p class="fs-6">Sigmund Freud</p>
-                <p class="fs-6">4,99$ (optional)</p>
               </div>
             </a>
 
@@ -169,7 +244,6 @@
               <div class="d-grid gap-1">
                 <h3 class="fs-6">Die Verwandlung</h3>
                 <p class="fs-6">Franz Kafka</p>
-                <p class="fs-6">4,99$ (optional)</p>
               </div>
             </a>
 
@@ -193,7 +267,6 @@
               <div class="d-grid gap-1">
                 <h3 class="fs-6">Die Leiden des jungen Werther</h3>
                 <p class="fs-6">Johann Wolfgang v. Goethe</p>
-                <p class="fs-6">4,99$ (optional)</p>
               </div>
             </a>
 
@@ -217,7 +290,6 @@
               <div class="d-grid gap-1">
                 <h3 class="fs-6">Die Verwandlung</h3>
                 <p class="fs-6">Franz Kafka</p>
-                <p class="fs-6">4,99$ (optional)</p>
               </div>
             </a>
           </div>
@@ -272,7 +344,7 @@
             class="d-grid grid-md-cols-2 gap-5 align-items-start p-4 py-5 p-sm-5 p-md-8 border"
           >
             <div class="d-grid gap-4">
-              <h2 class="fs-1">Über unsere Bücher</h2>
+              <h2 class="fs-2">Über unsere Bücher</h2>
               <p class="fs-5">
                 Edition Leichte Sprache ist eine neue Buchreihe, die
                 einflussreiche Werke aus Literatur, Philosophie und Wissenschaft
@@ -284,12 +356,12 @@
 
               <p class="fs-5">
                 Unser Ziel: Wissen und Kultur für ein breites Publikum
-                zugänglich machen. * Help people learn the language
+                zugänglich machen.
               </p>
             </div>
 
             <div class="d-grid gap-4">
-              <h2 class="fs-1">Was ist Leichte Sprache?</h2>
+              <h2 class="fs-2">Was ist Leichte Sprache?</h2>
 
               <p class="fs-5">
                 Leichte Sprache ist eine besonders klare und einfache Form der
