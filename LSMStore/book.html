@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>• Book</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <!-- Bootstrap CSS UNUSED -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    /> -->
+  </head>
+  <body>
+    <!-- Navigation - Modal Navigation? -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand text-uppercase fs-6" href="#"
+          >Edition Leichte Sprache</a
+        >
+
+        <!-- Mobile Nav Toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu Items - Show as modal on mobile? -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Bücher entdecken</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Über unsere Bücher</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="d-grid gap-4 gap-md-5 mt-3 mt-md-5">
+      <!-- Main Content -->
+
+      <!-- Book Title Section -->
+      <section>
+        <div>
+          <div class="d-grid grid-md-cols-2 gap-5">
+            <!-- Product Visual -->
+            <div
+              class="border w-100 h-auto ratio-square d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="images/bookCover.png"
+                alt="Die Verwandlung von Franz Kafka"
+                class="w-50 h-auto"
+              />
+            </div>
+
+            <!-- Product Text -->
+            <div class="d-grid gap-3 max-w-640 align-content-start">
+              <p class="fs-5">Franz Kafka</p>
+              <h1 class="display-5 fw-medium">Die Verwandlung</h1>
+              <p class="fs-4">Ausgabe im Original und in leichter Sprache</p>
+
+              <!-- Buying and Testing Options -->
+              <div class="mt-2 border d-grid gap-4">
+                <!-- Buy -->
+                <div class="d-grid gap-2">
+                  <p>Buch kaufen</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span>•</span>Ebook kaufen
+                    </div>
+                    <div>4,99$</div>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span>•</span>Auf Amazon bestellen
+                    </div>
+                    <div>4,99$</div>
+                  </a>
+                </div>
+                <!-- Test -->
+                <div class="d-grid gap-2">
+                  <p>Kostenlose Leseprobe</p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span>•</span>Online lesen
+                    </div>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <span>•</span>Leseprobe herunterladen
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About the Book -->
+      <section>
+        <div>
+          <div class="p-4 py-5 p-sm-5 p-md-8">
+            <div class="d-grid gap-4">
+              <h2 class="fs-2">Über das Buch</h2>
+
+              <p class="fs-5">
+                Leichte Sprache ist eine besonders klare und einfache Form der
+                deutschen Sprache. Sie wurde entwickelt, damit möglichst viele
+                Menschen Texte verstehen können – unabhängig von ihren
+                Sprachkenntnissen oder Lernfähigkeiten.
+              </p>
+              <p class="fs-5">
+                Texte in leichter Sprache verwenden kurze, einfache Sätze,
+                nutzen einfache Wörter, erklären schwierige Begriffe und
+                verzichten auf unnötige Details.
+              </p>
+              <p class="fs-5">
+                Leichte Sprache hilft Menschen, die: Probleme mit Lesen und
+                Schreiben haben, Deutsch als Fremdsprache lernen,
+                Lernschwierigkeiten haben oder Texte einfach und schnell
+                erfassen möchten.
+              </p>
+
+              <ul class="list-group">
+                <li class="list-group-item">Ebook ISBN 900-800-202-305</li>
+                <li class="list-group-item">
+                  Print-Ausgabe ISBN 900-800-202-305
+                </li>
+                <li class="list-group-item">
+                  Print-Ausgabe ISBN 900-800-202-305
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Books and LS -->
+      <section>
+        <div>
+          <div class="d-grid grid-md-cols-2 gap-5 align-items-start">
+            <div class="d-grid gap-4 p-4 py-5 p-sm-5 p-md-8 border">
+              <h2 class="fs-2">Über unsere Bücher</h2>
+              <p class="fs-5">
+                Edition Leichte Sprache ist eine neue Buchreihe, die
+                einflussreiche Werke aus Literatur, Philosophie und Wissenschaft
+                durch leichte Sprache zugänglich macht – nicht nur für Menschen
+                mit speziellen Bedürfnissen, sondern für absolut alle, die
+                komplexe Inhalte in einer klareren, vereinfachten Sprache lesen
+                möchten.
+              </p>
+
+              <p class="fs-5">
+                Unser Ziel: Wissen und Kultur für ein breites Publikum
+                zugänglich machen. * Help people learn the language
+              </p>
+            </div>
+
+            <div class="d-grid gap-4 p-4 py-5 p-sm-5 p-md-8 border">
+              <h2 class="fs-2">Was ist Leichte Sprache?</h2>
+
+              <p class="fs-5">
+                Leichte Sprache ist eine besonders klare und einfache Form der
+                deutschen Sprache. Sie wurde entwickelt, damit möglichst viele
+                Menschen Texte verstehen können – unabhängig von ihren
+                Sprachkenntnissen oder Lernfähigkeiten.
+              </p>
+              <p class="fs-5">
+                Texte in leichter Sprache verwenden kurze, einfache Sätze,
+                nutzen einfache Wörter, erklären schwierige Begriffe und
+                verzichten auf unnötige Details.
+              </p>
+              <p class="fs-5">
+                Leichte Sprache hilft Menschen, die: Probleme mit Lesen und
+                Schreiben haben, Deutsch als Fremdsprache lernen,
+                Lernschwierigkeiten haben oder Texte einfach und schnell
+                erfassen möchten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter / More Soon Section -->
+      <section>
+        <div>
+          <div class="p-4 py-6 p-sm-5 p-md-8">
+            <!-- Text -->
+            <div class="d-grid gap-3 justify-items-center">
+              <h2 class="fs-2">
+                Ein wenig Geduld. Neue Buchtitel sind in Produktion.
+              </h2>
+              <p class="fs-5">
+                Wir arbeiten immer an neuen Büchern. Erhalte eine Nachricht,
+                wenn es was Neues zu lesen gibt.
+              </p>
+              <!-- Form -->
+              <form
+                class="d-flex flex-column flex-md-row align-items-center gap-2 mt-2"
+              >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email-Adresse"
+                />
+
+                <button
+                  type="submit"
+                  class="btn btn-primary text-nowrap w-full"
+                >
+                  <span class="icon">•</span>
+                  <span>Benachrichtigen lassen</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Visual -->
+            <div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div>
+        <div>
+          <p>What a sick footer my guy.</p>
+          <ul class="mb-0">
+            <li>Logo and tag/description?</li>
+            <li>Links? – Books, About Books,</li>
+            <li>Social media (IG, X, LinkedIn, …)</li>
+            <li>Contact</li>
+            <li>Legal stuff (inmprint and data)</li>
+            <li>Back to top</li>
+            <li>Payment methods?</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
