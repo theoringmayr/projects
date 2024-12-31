@@ -15,97 +15,70 @@
   </head>
   <body>
     <!-- Navigation - Modal Navigation? -->
-    <nav class="navbar navbar-expand-lg bg-light py-4 py-lg-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-4 fixed-top">
       <div class="d-flex align-items-center">
-        <a
-          class="navbar-brand text-uppercase fs-6 fw-semibold"
-          href="index.html"
+        <a class="navbar-brand text-uppercase fs-6" href="#"
           >Edition Leichte Sprache</a
         >
 
-        <!-- Mobile Menu Toggle -->
         <button
-          type="button"
           class="btn btn-sm btn-outline-primary d-block d-lg-none"
-          data-bs-toggle="modal"
-          data-bs-target="#mobileMenu"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
         >
-          = Menü
+          <span>=</span>
+          Menü
         </button>
 
-        <!-- Mobile Modal Menu -->
         <div
-          class="modal fade"
-          id="mobileMenu"
+          class="offcanvas offcanvas-start"
           tabindex="-1"
-          aria-labelledby="mobileMenuModalLabel"
-          aria-hidden="true"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
         >
-          <div
-            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-          >
-            <div class="modal-content h-100">
-              <div class="modal-header">
-                <p
-                  class="modal-title fs-6 fw-semibold"
-                  id="mobileMenuModalLabel"
-                >
-                  Menü
-                </p>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <!-- Mobile Nav Items go here -->
-
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-grid">
-                  <li class="nav-item">
-                    <a class="nav-link fs-4 fw-medium" href="#"
-                      >Bücher shoppen</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-4 fw-medium" href="#"
-                      >Was ist leichte Sprache?</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-4 fw-medium" href="#"
-                      >Über Edition LS</a
-                    >
-                  </li>
-                </ul>
-
-                <hr />
-
-                <ul class="list-group">
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">LinkedIn</a></li>
-                  <li><a href="#">X</a></li>
-                  <li><a href="#">Facebook</a></li>
-                </ul>
-              </div>
-            </div>
+          <div class="offcanvas-header">
+            <h5
+              class="offcanvas-title fw-medium fs-6"
+              id="offcanvasExampleLabel"
+            >
+              Menü
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-        </div>
 
-        <!-- Desktop Menu Items -->
-        <div class="d-none d-lg-block" id="desktopMenu">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bücher shoppen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Was ist leichte Sprache?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Über Edition LS</a>
-            </li>
-          </ul>
+          <!-- Container for Mobile Menu -->
+          <div
+            class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between justify-content-lg-end gap-3"
+          >
+            <!-- Menu Items List -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html#books"
+                  >Bücher-Shop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html#books"
+                  >Was ist leichte Sprache?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#about">Über uns</a>
+              </li>
+            </ul>
+
+            <!--Simple Language Selector -->
+            <button class="btn btn-sm btn-outline-primary">
+              Leichte Sprache einschalten
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -131,8 +104,10 @@
                 –verständlich aufbereitet und mit Originaltext zum Vergleich.
               </p>
               <div class="d-flex flex-column flex-md-row gap-3 mt-2">
-                <a href="#" class="btn btn btn-primary"> Bücher entdecken </a>
-                <a href="#" class="btn btn btn-outline-primary">
+                <a href="#books" class="btn btn btn-primary">
+                  Bücher entdecken
+                </a>
+                <a href="#about" class="btn btn btn-outline-primary">
                   Was ist leichte Sprache?
                 </a>
               </div>
@@ -149,7 +124,7 @@
       </section>
 
       <!-- Books Section -->
-      <section id="#books">
+      <section id="books">
         <div>
           <!-- Book Grid -->
           <div
@@ -317,7 +292,7 @@
       </section>
 
       <!-- About Books and LS -->
-      <section>
+      <section id="about">
         <div>
           <div
             class="d-grid grid-md-cols-2 gap-5 align-items-start p-4 py-5 p-sm-5 p-md-8 border"
@@ -365,7 +340,7 @@
       </section>
 
       <!-- AB Pattern -->
-      <section id="überBücher" class="">
+      <!-- <section id="überBücher" class="">
         <div>
           <div
             class="d-grid grid-cols-2 gap-5 p-4 p-sm-5 p-md-8 align-items-center border"
@@ -387,11 +362,11 @@
               </p>
             </div>
 
-            <!-- Visual -->
+           
             <div class="ratio-square border w-full"></div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Footer -->
@@ -418,31 +393,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Script for Aria -->
-    <script>
-      const mobileNav = document.getElementById("mobileMenu");
-      const desktopNav = document.getElementById("desktopMenu");
-
-      function toggleAriaHidden() {
-        // Set to breakpoint at which…
-        if (window.innerWidth < 992) {
-          // Mobile view
-          mobileNav.setAttribute("aria-hidden", "false");
-          desktopNav.setAttribute("aria-hidden", "true");
-          console.log("B Desktop hidden. Mobile visible");
-        } else {
-          // Desktop view
-          mobileNav.setAttribute("aria-hidden", "true");
-          desktopNav.setAttribute("aria-hidden", "false");
-
-          console.log("A Desktop visible. Mobile hidden");
-        }
-      }
-
-      //Run on resize and on initial load
-      window.addEventListener("resize", toggleAriaHidden);
-      document.addEventListener("DOMContentLoaded", toggleAriaHidden);
-    </script>
   </body>
 </html>
