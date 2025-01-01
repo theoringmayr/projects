@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Navigation - Modal Navigation? -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary py-4 fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="d-flex align-items-center">
         <a class="navbar-brand text-uppercase fs-6" href="#"
           >Edition Leichte Sprache</a
@@ -65,12 +65,15 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html#books"
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="index.html#aboutLS"
                   >Was ist leichte Sprache?</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html#about">Über uns</a>
+                <a class="nav-link" href="index.html#aboutBooks">Über uns</a>
               </li>
             </ul>
 
@@ -83,7 +86,7 @@
       </div>
     </nav>
 
-    <main class="d-grid gap-4 gap-md-5 mt-4 mt-md-5">
+    <main class="d-grid gap-4 gap-md-5">
       <!-- Main Content -->
 
       <!-- Hero Section -->
@@ -103,7 +106,7 @@
                 und schneller. Entdecke klassische Werke der deutschen Literatur
                 –verständlich aufbereitet und mit Originaltext zum Vergleich.
               </p>
-              <div class="d-flex flex-column flex-md-row gap-3 mt-2">
+              <div class="d-flex flex-column flex-md-row gap-2 gap-md-3 mt-2">
                 <a href="#books" class="btn btn btn-primary">
                   Bücher entdecken
                 </a>
@@ -292,12 +295,12 @@
       </section>
 
       <!-- About Books and LS -->
-      <section id="about">
+      <section>
         <div>
           <div
             class="d-grid grid-md-cols-2 gap-5 align-items-start p-4 py-5 p-sm-5 p-md-8 border"
           >
-            <div class="d-grid gap-4">
+            <div class="d-grid gap-4" id="aboutBooks">
               <h2 class="fs-2">Über unsere Bücher</h2>
               <p class="fs-5">
                 Edition Leichte Sprache ist eine neue Buchreihe, die
@@ -314,7 +317,7 @@
               </p>
             </div>
 
-            <div class="d-grid gap-4">
+            <div class="d-grid gap-4" id="aboutLS">
               <h2 class="fs-2">Was ist Leichte Sprache?</h2>
 
               <p class="fs-5">
@@ -393,5 +396,25 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Closing Mobile Menu when Click is detected -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const offcanvasLinks = document.querySelectorAll(
+          ".offcanvas .nav-link"
+        );
+        const offcanvasElement = document.querySelector(".offcanvas");
+
+        offcanvasLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const offcanvasInstance =
+              bootstrap.Offcanvas.getInstance(offcanvasElement);
+            if (offcanvasInstance) {
+              offcanvasInstance.hide();
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
