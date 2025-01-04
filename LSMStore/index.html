@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EDITION LEICHTE SPRACHE • Bücher in Leicher Sprache</title>
+    <title>Edition Leichte Sprache • Bücher in Leicher Sprache</title>
     <link rel="stylesheet" href="css/main.min.css" />
     <!-- Bootstrap CSS UNUSED -->
     <!-- <link
@@ -15,9 +15,9 @@
   </head>
   <body>
     <!-- Navigation - Modal Navigation? -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom fixed-top">
       <div class="d-flex align-items-center">
-        <a class="navbar-brand text-uppercase fs-6 fw-medium" href="#"
+        <a class="navbar-brand text-uppercase fs-6 fw-medium" href="index.html"
           >Edition Leichte Sprache</a
         >
 
@@ -33,7 +33,7 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-start"
+          class="offcanvas offcanvas-bottom"
           tabindex="-1"
           id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel"
@@ -75,10 +75,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="index.html#aboutBooks">Über uns</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#aboutBooks">Kontakt</a>
+              </li>
             </ul>
 
             <!--Simple Language Selector -->
-            <button class="btn btn-sm btn-outline-primary">
+            <button class="d-none btn btn-sm btn-outline-primary">
               Leichte Sprache einschalten
             </button>
           </div>
@@ -106,7 +109,15 @@
                 und schneller. Entdecke klassische Werke der deutschen Literatur
                 –verständlich aufbereitet und mit Originaltext zum Vergleich.
               </p>
-              <div class="d-flex flex-column flex-md-row gap-2 gap-md-3 mt-2">
+
+              <ul class="d-none d-grid list-unstyled">
+                <li>Einfach zu verstehen in leichter Sprache</li>
+                <li>Originaltreue Wiedergabe</li>
+                <li>Mit Originaltext zum Vergleich</li>
+              </ul>
+
+              <!-- Button Group – Hidden currently -->
+              <div class="d-none flex-column flex-md-row gap-2 gap-md-3 mt-2">
                 <a href="#books" class="btn btn btn-primary">
                   Bücher entdecken
                 </a>
@@ -130,6 +141,7 @@
       <section id="books">
         <div>
           <!-- Book Grid -->
+          <h2 class="fs-5 mb-4">Bücher entdecken</h2>
           <div
             class="d-grid grid-cols-2 grid-md-cols-3 column-gap-3 row-gap-4 gap-md-4 row-gap-md-5 align-items-start"
           >
@@ -253,46 +265,6 @@
         </div>
       </section>
 
-      <!-- Newsletter / More Soon Section -->
-      <section>
-        <div>
-          <div class="p-4 py-6 p-sm-5 p-md-8 border">
-            <!-- Text -->
-            <div class="d-grid gap-3 justify-items-center text-center">
-              <h2 class="fs-2">
-                Ein wenig Geduld. Neue Buchtitel sind in Produktion.
-              </h2>
-              <p class="fs-5">
-                Wir arbeiten immer an neuen Büchern. Erhalte eine Nachricht,
-                wenn es was Neues zu lesen gibt.
-              </p>
-              <!-- Form -->
-              <form
-                class="d-flex flex-column flex-md-row align-items-center gap-2 mt-2"
-              >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Email-Adresse"
-                />
-
-                <button
-                  type="submit"
-                  class="btn btn-primary text-nowrap w-full"
-                >
-                  <span>Benachrichtigen lassen</span>
-                </button>
-              </form>
-            </div>
-
-            <!-- Visual -->
-            <div></div>
-          </div>
-        </div>
-      </section>
-
       <!-- About Books and LS -->
       <section>
         <div>
@@ -341,6 +313,33 @@
         </div>
       </section>
 
+      <!-- Services for Businesses -->
+      <section>
+        <div>
+          <div
+            class="d-grid grid-md-cols-2 gap-5 align-items-start p-4 py-5 p-sm-5 p-md-8 border"
+          >
+            <div class="d-grid gap-4" id="aboutBooks">
+              <h2 class="fs-2">Leichte Sprache für Ihr Unternehmen</h2>
+
+              <p class="fs-5">
+                Wir helfen Ihnen dabei, ihre Inhalte in leichter Sprache
+                zugänglich und verständlich zu machen.
+              </p>
+              <p class="fs-5">
+                Gemeinsam mit Verlagen, die das Potenzial von Leichter Sprache
+                für ihr eigenes Programm erkunden möchten, erarbeiten wir
+                spezielle LS-Ausgaben. Öffentlichen und privaten Organisationen
+                bieten wir maßgeschneiderte Dienstleistungen, um Texte
+                zugänglicher zu gestalten.
+              </p>
+
+              <a href="#" class="fs-5"> Mehr informationen auf ls-media.org </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- AB Pattern -->
       <!-- <section id="überBücher" class="">
         <div>
@@ -372,19 +371,98 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white py-8">
+    <footer class="pt-5 pt-md-8 py-8 fw-5 border-top">
       <div>
-        <div>
-          <p>What a sick footer my guy.</p>
-          <ul class="mb-0">
-            <li>Logo and tag/description?</li>
-            <li>Links? – Books, About Books,</li>
-            <li>Social media (IG, X, LinkedIn, …)</li>
-            <li>Contact</li>
-            <li>Legal stuff (inmprint and data)</li>
-            <li>Back to top</li>
-            <li>Payment methods?</li>
-          </ul>
+        <!-- Newsletter Block -->
+        <div class="d-none p-4 py-6 p-sm-5 p-md-8 border mb-4 mb-md-6">
+          <!-- Text -->
+          <div class="d-grid gap-3 justify-items-center text-center">
+            <h2 class="fs-2">
+              Ein wenig Geduld. Neue Buchtitel sind in Produktion.
+            </h2>
+            <p class="fs-5">
+              Wir arbeiten immer an neuen Büchern. Erhalte eine Nachricht, wenn
+              es was Neues zu lesen gibt.
+            </p>
+            <!-- Form -->
+            <form
+              class="d-flex flex-column flex-md-row align-items-center gap-2 mt-2"
+            >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Email-Adresse"
+              />
+
+              <button type="submit" class="btn btn-primary text-nowrap w-full">
+                <span>Benachrichtigen lassen</span>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="d-grid grid-md-cols-2-1-1-1 gap-5 gap-md-4 p-4 p-md-0">
+          <div class="d-grid gap-2 align-content-start pe-5">
+            <h5 class="navbar-brand">Edition Leichte Sprache</h5>
+
+            <p>
+              Fehler gefunden? Vorschlag zur Verbesserung oder Titelwunsch?
+              Schreibe uns eine Nachricht.
+            </p>
+            <a href="#">contact@edition-ls.de</a>
+          </div>
+
+          <!-- Links -->
+          <div class="">
+            <h5 class="mb-2 fs-6">Links</h5>
+            <ul class="nav d-grid gap-2">
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Bücher-Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Über leichte Sprache</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Über uns</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="">
+            <h5 class="mb-2 fs-6">Social Media</h5>
+            <ul class="nav d-grid gap-2">
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Instagram</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Facebook</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal Info -->
+          <div class="">
+            <h5 class="mb-2 fs-6">Rechtliches</h5>
+            <ul class="nav d-grid gap-2">
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Impressum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">Datenschutz</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#">AGB</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
