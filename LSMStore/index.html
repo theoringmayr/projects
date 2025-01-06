@@ -21,14 +21,19 @@
           >Edition Leichte Sprache</a
         >
 
+        <!-- Mobile Menu Toggle -->
         <button
-          class="btn btn-sm btn-outline-primary d-block d-lg-none"
+          class="btn btn-sm border d-flex align-items-center gap-2 d-lg-none"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample"
         >
-          <span>=</span>
+          <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+          </div>
+
           Menü
         </button>
 
@@ -53,12 +58,12 @@
             ></button>
           </div>
 
-          <!-- Container for Mobile Menu -->
+          <!-- Container for Menu Items -->
           <div
             class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between justify-content-lg-end gap-3"
           >
             <!-- Menu Items List -->
-            <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-2">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="index.html#books"
                   >Bücher-Shop</a
@@ -92,15 +97,15 @@
     <main class="d-grid gap-4 gap-md-5">
       <!-- Main Content -->
 
-      <!-- Hero Section -->
-      <section>
+      <!-- OG Hero - DONT TOUCH-->
+      <section class="d-none">
         <div>
           <!-- Hero Card -->
           <div
-            class="p-4 py-6 p-sm-5 p-md-8 py-md-10 position-relative d-flex flex-column justify-content-center border"
+            class="p-4 py-6 p-sm-5 p-md-8 py-md-10 position-relative d-flex flex-column justify-content-center border overflow-hidden"
           >
             <!-- Text -->
-            <div class="d-grid gap-3 max-w-640">
+            <div class="d-grid gap-3 w-50">
               <h1 class="display-5 fw-medium">
                 Lesen leicht gemacht. Für Alle.
               </h1>
@@ -128,11 +133,66 @@
             </div>
 
             <!-- Hero Visual -->
-            <img
-              src="images/heroimage2.png"
-              alt=""
-              class="d-none position-absolute top-50 end-0 translate-middle-y w-25 h-auto"
-            />
+            <div
+              class="hero-visual border position-absolute top-50 end-0 w-25 h-auto"
+            >
+              <div
+                class=""
+                style="
+                  height: 50px;
+                  width: 1px;
+                  border: 0.5px solid;
+                  position: absolute;
+                  left: 50%;
+                  height: 100%;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section -->
+      <section>
+        <div>
+          <!-- Hero Card (p-4 py-6 p-sm-5 p-md-8 py-md-10)-->
+          <div
+            class="position-relative border overflow-hidden d-grid grid-lg-cols-2 align-items-center"
+          >
+            <!-- Text -->
+            <div
+              class="d-grid gap-3 align-content-center p-4 p-sm-5 p-md-6 p-lg-7"
+            >
+              <h1 class="display-5 fw-medium">
+                Lesen leicht gemacht. Für Alle.
+              </h1>
+              <p class="fs-5">
+                Mit unseren Büchern in Leichter Sprache wird das Lesen einfacher
+                und schneller. Entdecke klassische Werke der deutschen Literatur
+                –verständlich aufbereitet und mit Originaltext zum Vergleich.
+              </p>
+
+              <ul class="d-none d-grid list-unstyled">
+                <li>Einfach zu verstehen in leichter Sprache</li>
+                <li>Originaltreue Wiedergabe</li>
+                <li>Mit Originaltext zum Vergleich</li>
+              </ul>
+
+              <!-- Button Group – Hidden currently -->
+              <div class="d-none flex-column flex-md-row gap-2 gap-md-3 mt-2">
+                <a href="#books" class="btn btn btn-primary">
+                  Bücher entdecken
+                </a>
+                <a href="#about" class="btn btn btn-outline-primary">
+                  Was ist leichte Sprache?
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="">
+              <div class="bg-light border p-5 ratio-square"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -147,7 +207,7 @@
           >
             <!-- Book Card -->
             <a
-              href="book.html"
+              href="book-alt.html"
               class="d-grid gap-3 text-decoration-none text-color-inherit"
             >
               <!-- Book Card Visual -->
@@ -170,7 +230,7 @@
 
             <!-- Book Card -->
             <a
-              href="#"
+              href="book.html"
               class="d-grid gap-3 text-decoration-none text-color-inherit"
             >
               <!-- Book Card Visual -->
@@ -371,7 +431,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-5 pt-md-8 py-8 fw-5 border-top">
+    <footer class="py-4 py-sm-5 py-lg-6 pb-lg-10 fw-5 border-top bg-light">
       <div>
         <!-- Newsletter Block -->
         <div class="d-none p-4 py-6 p-sm-5 p-md-8 border mb-4 mb-md-6">
@@ -402,15 +462,22 @@
             </form>
           </div>
         </div>
-        <div class="d-grid grid-md-cols-2-1-1-1 gap-5 gap-md-4 p-4 p-md-0">
-          <div class="d-grid gap-2 align-content-start pe-5">
+
+        <!-- Footer Links -->
+        <div class="d-grid grid-lg-cols-2-1-1-1 gap-4 p-md-0">
+          <!-- Contact -->
+          <div class="d-grid gap-2 align-content-start pe-6">
             <h5 class="navbar-brand">Edition Leichte Sprache</h5>
 
             <p>
               Fehler gefunden? Vorschlag zur Verbesserung oder Titelwunsch?
               Schreibe uns eine Nachricht.
             </p>
-            <a href="#">contact@edition-ls.de</a>
+            <a
+              href="mailto:contact@edition-ls.de"
+              class="btn btn-sm btn-outline-primary fs-6 mt-2"
+              >contact@edition-ls.de</a
+            >
           </div>
 
           <!-- Links -->
