@@ -3,33 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Page</title>
+    <title>Book Alt Page</title>
     <link rel="stylesheet" href="css/main.min.css" />
-    <!-- Bootstrap CSS UNUSED -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    /> -->
   </head>
   <body>
     <!-- Navigation - Modal Navigation? -->
+
     <nav class="navbar navbar-expand-lg bg-white border-bottom fixed-top">
       <div class="d-flex align-items-center">
         <a class="navbar-brand text-uppercase fs-6 fw-medium" href="index.html"
           >Edition Leichte Sprache</a
         >
 
+        <!-- Mobile Menu Toggle -->
         <button
-          class="btn btn-sm btn-outline-primary d-block d-lg-none"
+          class="btn btn-sm p-2 border d-flex align-items-center gap-2 d-lg-none"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample"
         >
-          <span>=</span>
-          Menü
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="20px"
+            viewBox="0 -960 960 960"
+            width="20px"
+            fill="undefined"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            ></path>
+          </svg>
         </button>
 
         <div
@@ -53,12 +57,12 @@
             ></button>
           </div>
 
-          <!-- Container for Mobile Menu -->
+          <!-- Container for Menu Items -->
           <div
             class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between justify-content-lg-end gap-3"
           >
             <!-- Menu Items List -->
-            <ul class="navbar-nav mb-2 mb-lg-0">
+            <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-2">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="index.html#books"
                   >Bücher-Shop</a
@@ -91,26 +95,16 @@
 
     <!-- Main Content -->
     <main class="d-grid gap-4 gap-md-5">
-      <!-- Bread Crumbs -->
-      <section>
-        <div>
-          <div class="d-flex gap-2">
-            <a href="index.html" class="text-underline">Alle Bücher</a>
-            <span>/</span>
-            <p>Die Verwandlung</p>
-          </div>
-        </div>
-      </section>
-
       <!-- Product Hero Section -->
       <section>
         <div>
           <!--  -->
-          <div class="d-grid grid-md-cols-3-2 gap-4 gap-md-5 align-items-start">
+          <div
+            class="d-grid grid-lg-cols-2 gap-5 gap-lg-5 gap-xl-6 align-items-start"
+          >
             <!-- Product Visual -->
-
             <div
-              class="border w-100 h-auto ratio-square d-flex justify-content-center align-items-center"
+              class="border bg-light w-100 h-auto ratio-square d-flex justify-content-center align-items-center sticky-lg-top"
             >
               <img
                 src="images/bookCover.png"
@@ -121,12 +115,36 @@
 
             <!-- Product Text -->
             <div class="d-grid gap-4 align-content-start p-0">
-              <div class="d-grid gap-2">
-                <p class="fs-4">Franz Kafka</p>
-                <h1 class="display-5 fw-medium">Die Verwandlung</h1>
+              <!-- <div class="d-grid gap-2">
+                <a
+                  href="index.html#books"
+                  class="btn btn-sm px-3 py-1 ps-2 w-max-content border d-flex alig-items-center rounded-pill bg-light mb-2"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="20px"
+                    viewBox="0 -960 960 960"
+                    width="20px"
+                    fill="undefined"
+                  >
+                    <path
+                      d="M576-240 336-480l240-240 51 51-189 189 189 189-51 51Z"
+                    ></path>
+                  </svg>
+                  Alle Bücher</a
+                >
+
+                <h1 class="display-6 fw-medium">Die Verwandlung</h1>
+                <p class="fs-5">Franz Kafka</p>
                 <p class="fs-4 d-none">
                   Ausgabe im Original und in leichter Sprache
                 </p>
+              </div> -->
+
+              <div class="d-grid gap-2">
+                <p class="fs-5">Franz Kafka</p>
+                <h1 class="display-6 fw-medium">Die Verwandlung</h1>
+
+                <p class="fs-5">Ausgabe im Original und in leichter Sprache</p>
               </div>
 
               <!-- Buying and Testing Options -->
@@ -152,7 +170,7 @@
                       </svg>
                       eBook (epub)
                     </div>
-                    <div>4,99$</div>
+                    <div>4,99€</div>
                   </a>
 
                   <a
@@ -175,7 +193,7 @@
                     </div>
                   </a>
                 </div>
-                <!-- Test -->
+                <!-- Test Book-->
                 <div class="d-grid gap-2">
                   <p>Kostenlose Leseprobe</p>
                   <a
@@ -218,51 +236,67 @@
                     </div>
                   </a>
                 </div>
+
+                <!-- About -->
+                <div class="d-grid gap-4 mt-4">
+                  <h2 class="fs-4">Über das Buch</h2>
+
+                  <p class="fs-5">
+                    Die Verwandlung ist Kafkas bekannteste Werk und ein
+                    Schlüsseltext der modernen Literatur. Die Erzählung
+                    schildert die verstörende Verwandlung des Handelsreisenden
+                    Gregor Samsa in ein ungeheures Insekt und beleuchtet die
+                    existenziellen Konflikte des Individuums in einer
+                    entfremdeten Welt.
+                  </p>
+                  <p class="fs-5">
+                    Unsere Ausgabe in Leichter Sprache bewahrt die Tiefe und
+                    Wirkung dieses Klassikers in allen Details, macht ihn jedoch
+                    klarer und deutlich leichter und effizienter lesbar.
+                    Komplexe Satzstrukturen und Kafkas oft dichte Sprache werden
+                    behutsam vereinfacht. Der Text wird dadurch für ein
+                    wesentlich breiteres, heutiges Publikum zugänglich – ohne an
+                    literarischer Qualität einzubüßen.
+                  </p>
+                  <p class="fs-5">
+                    Ursprünglich entwickelt für Menschen mit Lese-, Sprach- oder
+                    Lern-Schwierigkeiten, hat Leichte Sprache sich als absolut
+                    ideal für jeden erwiesen, der bedeutende Werke rasch und
+                    ohne Hürden entdecken möchte.
+                  </p>
+
+                  <ul class="list-unstyled d-grid gap-2 fs-6">
+                    <li class="list-group-item">Ebook ISBN 900-800-202-305</li>
+                    <li class="list-group-item">
+                      Print-Ausgabe ISBN 900-800-202-305
+                    </li>
+                    <li class="list-group-item">
+                      Verfügbar seit <span>2024-10</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- About the Book -->
+      <!-- Warning -->
       <section>
         <div>
-          <div class="p-4 py-5 p-sm-5 p-md-8 border">
-            <div class="d-grid gap-4">
-              <h2 class="fs-2">Über das Buch</h2>
+          <div class="p-4 p-sm-5 p-md-8 border">
+            <div class="d-grid gap-3">
+              <h2 class="fs-3">Hinweis</h2>
 
               <p class="fs-5">
-                Die Verwandlung ist Kafkas bekannteste Werk und ein
-                Schlüsseltext der modernen Literatur. Die Erzählung schildert
-                die verstörende Verwandlung des Handelsreisenden Gregor Samsa in
-                ein ungeheures Insekt und beleuchtet die existenziellen
-                Konflikte des Individuums in einer entfremdeten Welt.
-              </p>
-              <p class="fs-5">
-                Unsere Ausgabe in Leichter Sprache bewahrt die Tiefe und Wirkung
-                dieses Klassikers in allen Details, macht ihn jedoch klarer und
-                deutlich leichter und effizienter lesbar. Komplexe
-                Satzstrukturen und Kafkas oft dichte Sprache werden behutsam
-                vereinfacht. Der Text wird dadurch für ein wesentlich breiteres,
-                heutiges Publikum zugänglich – ohne an literarischer Qualität
-                einzubüßen.
-              </p>
-              <p class="fs-5">
-                Ursprünglich entwickelt für Menschen mit Lese-, Sprach- oder
-                Lern-Schwierigkeiten, hat Leichte Sprache sich als absolut ideal
-                für jeden erwiesen, der bedeutende Werke rasch und ohne Hürden
-                entdecken möchte.
+                Probleme mit der Anzeige unserer eBooks auf Ihrem eBook-Reader?
+                Bitte schreiben Sie einfach an support@ls-media.org, teilen Sie
+                uns mit, 1) um welches Buch es sich handelt, und 2) wo Sie es
+                erworben haben. Wir stellen dann so rasch wie möglich eine
+                Alternativ-Lösung für Sie bereit!
               </p>
 
-              <ul class="list-group">
-                <li class="list-group-item">Ebook ISBN 900-800-202-305</li>
-                <li class="list-group-item">
-                  Print-Ausgabe ISBN 900-800-202-305
-                </li>
-                <li class="list-group-item">
-                  Verfügbar seit <span>2024-10</span>
-                </li>
-              </ul>
+              <a href="#" class="fs-5">contact@edition-ls.de</a>
             </div>
           </div>
         </div>
@@ -270,7 +304,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-5 pt-md-8 py-8 fw-5 border-top">
+    <footer class="py-5 py-lg-6 pb-lg-10 fw-5 border-top bg-light">
       <div>
         <!-- Newsletter Block -->
         <div class="d-none p-4 py-6 p-sm-5 p-md-8 border mb-4 mb-md-6">
@@ -301,15 +335,22 @@
             </form>
           </div>
         </div>
-        <div class="d-grid grid-md-cols-2-1-1-1 gap-5 gap-md-4 p-4 p-md-0">
-          <div class="d-grid gap-2 align-content-start pe-5">
+
+        <!-- Footer Links -->
+        <div class="d-grid grid-lg-cols-2-1-1-1 gap-5 gap-lg-4 p-md-0">
+          <!-- Contact -->
+          <div class="d-grid gap-2 align-content-start pe-6">
             <h5 class="navbar-brand">Edition Leichte Sprache</h5>
 
             <p>
               Fehler gefunden? Vorschlag zur Verbesserung oder Titelwunsch?
               Schreibe uns eine Nachricht.
             </p>
-            <a href="#">contact@edition-ls.de</a>
+            <a
+              href="mailto:contact@edition-ls.de"
+              class="btn btn-sm btn-outline-primary fs-6 mt-2"
+              >contact@edition-ls.de</a
+            >
           </div>
 
           <!-- Links -->
