@@ -36,18 +36,12 @@
         </button>
 
         <div
-          class="offcanvas offcanvas-bottom"
+          class="offcanvas offcanvas-end"
           tabindex="-1"
           id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel"
         >
           <div class="offcanvas-header">
-            <h5
-              class="offcanvas-title fw-medium fs-6"
-              id="offcanvasExampleLabel"
-            >
-              Menü
-            </h5>
             <button
               type="button"
               class="btn-close"
@@ -72,7 +66,7 @@
                   >Über unsere Bücher</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item mt-3 mt-lg-0">
                 <button class="btn btn-sm btn-outline-primary ms-lg-2">
                   Leichte Sprache einschalten
                 </button>
@@ -91,15 +85,17 @@
     <main class="d-grid gap-4 gap-md-5">
       <!-- Main Content -->
 
-      <!-- Hero-->
-      <section class="">
+      <!-- Hero Mockup -->
+      <section class="d-none">
         <div>
           <!-- Hero Card -->
           <div
-            class="p-4 py-6 p-sm-5 p-md-8 py-md-10 position-relative d-flex flex-column justify-content-center border overflow-hidden"
+            class="position-relative d-grid grid-lg-cols-2 align-items-center border overflow-hidden"
           >
             <!-- Text -->
-            <div class="d-grid gap-3 w-50">
+            <div
+              class="d-grid gap-3 p-4 py-6 p-sm-5 p-md-8 py-md-10 align-content-center"
+            >
               <h1 class="display-5 fw-medium">
                 Lesen leicht gemacht. Für Alle.
               </h1>
@@ -127,20 +123,48 @@
             </div>
 
             <!-- Hero Visual -->
+            <img
+              src="images/mockups/Free_Book_Mockup_5.jpg"
+              style="
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1;
+                object-fit: cover;
+              "
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Sketch -->
+      <section>
+        <div>
+          <!-- Hero Card -->
+          <div
+            class="position-relative d-grid grid-lg-cols-3-2 align-items-center border overflow-hidden"
+          >
+            <!-- Text -->
             <div
-              class="hero-visual border position-absolute top-50 end-0 w-25 h-auto"
+              class="d-grid gap-3 p-4 py-5 p-sm-5 px-lg-7 py-lg-10 align-content-center"
             >
-              <div
-                class=""
-                style="
-                  height: 50px;
-                  width: 1px;
-                  border: 0.5px solid;
-                  position: absolute;
-                  left: 50%;
-                  height: 100%;
-                "
-              ></div>
+              <h1 class="display-5 fw-medium">
+                Lesen leicht gemacht. Für Alle.
+              </h1>
+              <p class="fs-5">
+                Mit unseren Büchern in Leichter Sprache wird das Lesen einfacher
+                und schneller. Entdecke Literaturklassiker – verständlich
+                aufbereitet und mit Originaltext zum Vergleich.
+              </p>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="w-100 h-100">
+              <img class="d-lg-none" src="images/books/spreadHero.png" alt="" />
+              <img
+                class="d-none d-lg-block object-fit-cover object-position-start h-100 w-100"
+                src="images/books/spreadSquare.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -391,26 +415,6 @@
         </div>
       </section>
 
-      <!-- Services for Businesses -->
-      <section class="d-none">
-        <div>
-          <div
-            class="d-grid grid-lg-cols-2 gap-5 align-items-start p-4 p-sm-5 p-lg-8 border"
-          >
-            <div class="d-grid gap-4" id="aboutBooks">
-              <h2 class="fs-2">Leichte Sprache für Verlage und Unternehmen</h2>
-
-              <p class="fs-5">
-                Wir helfen Ihnen dabei, ihre Inhalte in leichter Sprache
-                zugänglich und verständlich zu machen.
-              </p>
-
-              <a href="#" class="fs-5"> Mehr informationen auf ls-media.org </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section>
         <div>
           <div class="d-grid grid-lg-cols-2 gap-4 gap-lg-5">
@@ -419,7 +423,7 @@
               class="d-grid align-content-start justify-items-start gap-4 p-4 p-sm-5 p-lg-6 border"
               id="aboutBooks"
             >
-              <h2 class="fs-2">Leichte Sprache für Verlage und Unternehmen</h2>
+              <h2 class="fs-3">Leichte Sprache für Verlage und Unternehmen</h2>
 
               <p class="fs-5">
                 Wir helfen Ihnen dabei, ihre Inhalte in leichter Sprache
@@ -434,7 +438,7 @@
               class="d-grid align-content-start gap-4 p-4 p-sm-5 p-lg-6 border"
               id="aboutBooks"
             >
-              <h2 class="fs-2">Nicht's verpassen</h2>
+              <h2 class="fs-3">Nichts verpassen!</h2>
 
               <p class="fs-5">
                 Wir arbeiten an neuen Büchern. Erhalte eine Nachricht, wenn's
