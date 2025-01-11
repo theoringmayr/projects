@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edition Leichte Sprache • Bücher in Leicher Sprache</title>
+
+    <!-- CSS + Bootstrap -->
     <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- Splide CSS -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@splidejs/splide/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <!-- Navigation - Modal Navigation? -->
@@ -92,7 +100,7 @@
       </div>
     </nav>
 
-    <main class="d-grid gap-4 gap-md-5">
+    <main class="d-flex flex-column gap-4 gap-md-5">
       <!-- Main Content -->
 
       <!-- Hero Mockup -->
@@ -359,66 +367,93 @@
       <!-- Testimonials -->
       <section>
         <div>
-          <div class="d-grid gap-4 gap-lg-5 p-4 p-sm-5 p-lg-8 border">
+          <div
+            class="d-flex flex-column gap-4 gap-lg-5 p-4 px-0 p-sm-5 p-lg-8 px-lg-6 border"
+          >
             <h2 class="fs-1 text-center">Leser lieben leichte Literatur</h2>
 
-            <div class="slider" tabindex="0">
-              <!-- Review Card -->
-              <div class="p-4 border d-grid gap-3 align-content-between">
-                <p class="fs-5">
-                  Die Kombination aus Originaltext und Leichter Sprache ist
-                  perfekt. Ich verstehe mehr und lerne gleichzeitig.
-                </p>
-                <p class="fw-medium">Peter Pan</p>
-              </div>
+            <div class="splide" role="group">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li
+                    class="splide__slide border p-4 border d-grid gap-3 align-content-between"
+                  >
+                    <p class="fs-5">
+                      Die Kombination aus Originaltext und Leichter Sprache ist
+                      perfekt. Ich verstehe mehr und lerne gleichzeitig.
+                    </p>
+                    <p class="fw-medium">Peter Pan</p>
+                  </li>
 
-              <!-- Review Card -->
-              <div class="p-4 border d-grid gap-3 align-content-between">
-                <p class="fs-5">
-                  Ich war skeptisch, aber die LS-Bücher haben mich überzeugt.
-                  Sie machen komplizierte Inhalte klar und nachvollziehbar.
-                  Besonders bei älterer Sprache ist das eine enorme Hilfe. Und:
-                  Alles bleibt vollständig, was mir sehr wichtig ist. Ich möchte
-                  mich darauf verlassen können, keine willkürlich gekürzten
-                  Texte vorgesetzt zu bekommen.
-                </p>
-                <p class="fw-medium">Peter Pan</p>
-              </div>
+                  <li
+                    class="splide__slide border p-4 border d-grid gap-3 align-content-between"
+                  >
+                    <p class="fs-5">
+                      Ich war skeptisch, aber die LS-Bücher haben mich
+                      überzeugt. Sie machen komplizierte Inhalte klar und
+                      nachvollziehbar. Besonders bei älterer Sprache ist das
+                      eine enorme Hilfe. Und: Alles bleibt vollständig, was mir
+                      sehr wichtig ist. Ich möchte mich darauf verlassen können,
+                      keine willkürlich gekürzten Texte vorgesetzt zu bekommen.
+                    </p>
+                    <p class="fw-medium">Peter Pan</p>
+                  </li>
 
-              <!-- Review Card -->
-              <div class="p-4 border d-grid gap-3 align-content-between">
-                <p class="fs-5">
-                  Die Kombination aus Originaltext und Leichter Sprache ist
-                  perfekt. Ich verstehe mehr und lerne gleichzeitig.
-                </p>
-                <p class="fw-medium">Peter Pan</p>
-              </div>
+                  <li
+                    class="splide__slide border p-4 border d-grid gap-3 align-content-between"
+                  >
+                    <p class="fs-5">
+                      Ich war skeptisch, aber die LS-Bücher haben mich
+                      überzeugt. Sie machen komplizierte Inhalte klar und
+                      nachvollziehbar. Besonders bei älterer Sprache ist das
+                      eine enorme Hilfe. Und: Alles bleibt vollständig, was mir
+                      sehr wichtig ist. Ich möchte mich darauf verlassen können,
+                      keine willkürlich gekürzten Texte vorgesetzt zu bekommen.
+                    </p>
+                    <p class="fw-medium">Peter Pan</p>
+                  </li>
 
-              <!-- Review Card -->
-              <div class="p-4 border d-grid gap-3 align-content-between">
-                <p class="fs-5">
-                  Die Kombination aus Originaltext und Leichter Sprache ist
-                  perfekt. Ich verstehe mehr und lerne gleichzeitig.
-                </p>
-                <p class="fw-medium">Peter Pan</p>
-              </div>
+                  <li
+                    class="splide__slide border p-4 border d-grid gap-3 align-content-between"
+                  >
+                    <p class="fs-5">
+                      Ich war skeptisch, aber die LS-Bücher haben mich
+                      überzeugt. Sie machen komplizierte Inhalte klar und
+                      nachvollziehbar. Besonders bei älterer Sprache ist das
+                      eine enorme Hilfe. Und: Alles bleibt vollständig, was mir
+                      sehr wichtig ist. Ich möchte mich darauf verlassen können,
+                      keine willkürlich gekürzten Texte vorgesetzt zu bekommen.
+                    </p>
+                    <p class="fw-medium">Peter Pan</p>
+                  </li>
 
-              <!-- Review Card -->
-              <div class="p-4 border d-grid gap-3 align-content-between">
-                <p class="fs-5">
-                  Die Kombination aus Originaltext und Leichter Sprache ist
-                  perfekt. Ich verstehe mehr und lerne gleichzeitig.
-                </p>
-                <p class="fw-medium">Peter Pan</p>
-              </div>
+                  <li
+                    class="splide__slide border p-4 border d-grid gap-3 align-content-between"
+                  >
+                    <p class="fs-5">
+                      Ich war skeptisch, aber die LS-Bücher haben mich
+                      überzeugt. Sie machen komplizierte Inhalte klar und
+                      nachvollziehbar. Besonders bei älterer Sprache ist das
+                      eine enorme Hilfe. Und: Alles bleibt vollständig, was mir
+                      sehr wichtig ist. Ich möchte mich darauf verlassen können,
+                      keine willkürlich gekürzten Texte vorgesetzt zu bekommen.
+                    </p>
+                    <p class="fw-medium">Peter Pan</p>
+                  </li>
 
-              <!-- Review Card -->
-              <div class="p-4 border d-grid gap-3 align-content-between">
-                <p class="fs-5">
-                  Die Kombination aus Originaltext und Leichter Sprache ist
-                  perfekt. Ich verstehe mehr und lerne gleichzeitig.
-                </p>
-                <p class="fw-medium">Peter Pan</p>
+                  <li
+                    class="splide__slide border p-4 border d-grid gap-3 align-content-between"
+                  >
+                    <p class="fs-5">
+                      Die Idee, komplexe Inhalte in Leichter Sprache zu
+                      vermitteln, ist echt genial. Ich wünschte, es hätte das
+                      schon früher gegeben! Auch ein großes Lob für die sehr
+                      detaillierte und präzise Umsetzung. Hier wurde eindeutig
+                      mit sehr viel Aufwand und Liebe gearbeitet.
+                    </p>
+                    <p class="fw-medium">Peter Pan</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -557,6 +592,43 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Splide JS -->
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script>
+      //Initialize Splide
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide(".splide", {
+          perPage: 1,
+          padding: "18rem",
+
+          type: "loop",
+          gap: "1rem",
+          arrows: false,
+          pagination: true,
+
+          breakpoints: {
+            1200: {
+              padding: "10rem",
+              perPage: 1,
+            },
+
+            992: {
+              padding: "5rem",
+              perPage: 1,
+            },
+
+            768: {
+              padding: "2rem",
+              perPage: 1,
+            },
+          },
+        });
+
+        splide.mount();
+      });
+    </script>
 
     <!-- Closing Mobile Menu when Click is detected -->
     <script>
