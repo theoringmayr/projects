@@ -14919,6 +14919,14 @@ section > div {
   aspect-ratio: 3/2;
 }
 
+.book-thumbnail img {
+  transition: transform 100ms ease-in;
+}
+
+.book-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
 .product-info h5, .product-info .h5 {
   display: flex;
   align-items: center;
