@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popover</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="">
+        <dialog>
+          <p>Hello world. Click on the button.</p>
+          <form method="dialog">
+            <button>OK</button>
+          </form>
+        </dialog>
+
+        <button onclick="document.querySelector('dialog').showModal()">
+          Open Dialog
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <details>
+        <summary>Details interpolation example</summary>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+          dolores, distinctio ipsum veritatis magni soluta maiores rerum optio,
+          possimus animi eligendi architecto sed placeat quasi quibusdam, nihil
+          odio. Amet, tempore.
+        </p>
+      </details>
+    </section>
+  </body>
+</html>
