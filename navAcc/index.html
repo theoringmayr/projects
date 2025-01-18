@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Accessible + Responsive Navigation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Navigation -->
+
+    <nav>
+      <a href="/" class="brand">Brand</a>
+
+      <button class="toggle" popovertarget="my-popover">menu</button>
+
+      <ul id="my-popover" popover>
+        <div class="popover-header">
+          <h2>Menu</h2>
+          <button class="toggle" popovertarget="my-popover">close</button>
+        </div>
+        <div class="popover-body">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="" class="">Services</a>
+            <ul>
+              <li><a href="/">Research</a></li>
+              <li><a href="/">Design</a></li>
+              <li><a href="/">Development</a></li>
+              <li><a href="/">Testing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/">About</a>
+          </li>
+          <li>
+            <a href="/">Contact</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Dummy Content -->
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>
