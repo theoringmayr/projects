@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Transitions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="primary-navigation">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about.html">About</a>
+          </li>
+        </ul>
+
+        <div>
+          <label for="colorScheme"> </label>
+          <select name="colorScheme" id="colorScheme">
+            <option value="System">System</option>
+            <option value="Light">Light</option>
+            <option value="Dark">Dark</option>
+          </select>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      const themePicker = document.querySelector("select");
+      themePicker.addEventListener("change", (e) => {
+        const theme = e.target.value;
+        document.documentElement.dataset.theme = theme;
+        console.log(theme);
+
+        localStorage.setItem("theme", theme);
+      });
+
+      window.onload = () => {
+        const currentTheme = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = currentTheme;
+
+        themePicker.value = currentTheme;
+      };
+    </script>
+
+    <main>
+      <div class="wrapper">
+        <h1 class="page-title">Learn About Transitions</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, iusto
+          dolorum dignissimos excepturi quas sunt unde possimus veritatis ipsam
+          provident optio modi, sequi natus eum, enim a ab vero sapiente.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+          corporis consequatur harum illo voluptates quas eaque autem modi!
+          Molestias error nostrum, perferendis dolor nisi, et mollitia ducimus
+          cumque id eos ipsam explicabo eius dolores commodi facere, officiis
+          voluptas saepe esse maiores delectus perspiciatis quam? Cum tempora
+          quibusdam molestiae eligendi doloremque.
+        </p>
+        <div class="pic green"></div>
+        <div class="pic"></div>
+      </div>
+    </main>
+  </body>
+</html>
