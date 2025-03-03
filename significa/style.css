@@ -139,7 +139,7 @@ nav#fullMenu{
     /* Your CSS rules for screens below 768px go here */
 
     .mainNavItems{
-        display: none;
+        display: none !important;
         visibility: hidden;
     }
   }
