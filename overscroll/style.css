@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+}
+
+html{
+    font-family: Mona Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h2{
+    font-stretch: condensed;
+    font-size: 5vw;
+    text-transform: uppercase;
+    counter-increment: heading;
+}
+
+h2::before{
+    content: counter(heading, decimal-leading-zero);
+    margin-right: 1ch;
+}
+
+nav{
+    padding: 1.5rem;
+    width: 100%;
+    z-index: 100;
+    background: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+   
+}
+
+header{
+  
+    background: hotpink;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    display: grid;
+    min-height: 75vh;
+    place-content: center;
+    
+    & h2 {
+        font-size: 8vw;
+    }
+}
+
+
+main{
+    position: relative;
+    z-index: 10;
+    counter-reset: heading;
+    /* position: sticky; */
+    top: 0;
+
+    & > div {
+        
+        width: 100%;
+        position: sticky;
+        top: 0;
+    }
+    
+}
+
+header, section, footer{
+    padding: 3rem;
+}
+
+section{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: white;
+}
+
+section:nth-of-type(odd){
+    background: whitesmoke;
+}
+
+section:first-of-type{
+    background: springgreen;
+}
+
+
+footer{
+    background: black;
+    color: white;
+    min-height: 50vh;
+    position: sticky;
+   
+    bottom: 0;
+    width: 100%;
+    text-transform: uppercase;
+}
