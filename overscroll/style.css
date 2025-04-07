@@ -17,10 +17,7 @@ h2{
     counter-increment: heading;
 }
 
-h2::before{
-    content: counter(heading, decimal-leading-zero);
-    margin-right: 1ch;
-}
+
 
 nav{
     padding: 1.5rem;
@@ -43,7 +40,7 @@ header{
     width: 100%;
     top: 0;
     display: grid;
-    min-height: 75vh;
+    min-height: 100svh;
     place-content: center;
     
     & h2 {
@@ -73,7 +70,7 @@ header, section, footer{
 }
 
 section{
-    min-height: 100vh;
+    min-height: 100svh;
     display: grid;
     place-content: center;
     text-align: center;
@@ -92,7 +89,7 @@ section:first-of-type{
 footer{
     background: black;
     color: white;
-    min-height: 50vh;
+    min-height: 50svh;
     position: sticky;
    
     bottom: 0;
