@@ -108,8 +108,8 @@ nav{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 3rem;
-        gap: 2rem;
+        font-size: 4rem;
+        gap: 0rem;
         text-align: center;
         padding-inline: 8rem;
         font-stretch: condensed;
@@ -159,12 +159,12 @@ section{
 
 .hero{
     text-align: center;
-    min-height: 100dvh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: end;
     padding-bottom: 3rem;
-    background: darkblue;
+    background: #120918;
     
 
 
