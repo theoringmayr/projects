@@ -159,11 +159,12 @@ section{
 
 .hero{
     text-align: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: end;
     padding-bottom: 3rem;
+    background: darkblue;
     
 
 
