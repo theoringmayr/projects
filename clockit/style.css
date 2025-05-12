@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'DM Sans Var';
+  src: url('/fonts/DMSans-VF.ttf') format('truetype-variations');
+  font-weight: 100 900; /* Range supported by DM Sans */
+  font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: "DM Sans Var";
+    font-feature-settings: 'ss02', 'ss03', 'ss05';
+    color-scheme: dark;
+}
+
+section{
+    padding: 1rem;
+    max-width: 768px;
+    margin-inline: auto;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: 600;
+}
+
+p{
+    line-height: 1.5;
+}
+
+button{
+    border: unset;
+    background: unset;
+    font: inherit;
+    font-family: inherit;
+}
+
+*:not(button){
+    border-color: #333 !important;
+}
+
+/* TOP BUTTONS */
+.top-controls{
+    padding-bottom: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+
+    & button{
+        padding: 0.375rem 0.5rem;
+        border: 1px solid;
+        border-radius: 0.375rem;
+
+    }
+}
+
+/* DIALOG / MODAL */
+
+::backdrop{
+    background: canvas;
+    opacity: 0.5;
+}
+
+dialog{
+    background: canvas;
+    width: calc(100% - 2rem);
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    margin-inline: auto;
+    padding: 2.5rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    gap: 1rem;
+
+    & h3{
+        font-size: 1.5rem;
+    }
+
+    & p{
+        max-width: 30ch;
+    }
+
+    
+}
+
+dialog:popover-open{
+    display: grid;
+}
+
+
+/* STATUS CARD */
+
+.status-card{
+    border: 1px solid;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 480px;
+    border-radius: 0.5rem;
+}
+
+h2.status-title{
+    font-size: 2rem;
+    line-height: 1.125;
+    margin-top: 1rem;
+}
+
+#clockButton{
+    padding: 1rem 1.5rem;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    background: white;
+    color: canvas;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+}
+
+/* TABLE */
+
+.table-container{
+    border: 1px solid;
+    border-radius: 0.5rem;
+}
+
+table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 1rem;
+     border-bottom: 1px solid;
+}
+
+tr:last-of-type td{
+    border-bottom: unset;
+}
+
+.table-heading{
+    background: canvas;
+    position: sticky;
+    top: 0;
+    padding-block: 1rem;
+}
