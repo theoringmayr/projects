@@ -76,12 +76,11 @@ dialog{
     border-radius: 0.5rem;
     text-align: center;
     top: 50%;
-    transform: translateY(-50%);
-    height: fit-content;
-    
+    transform: translateY(-50%);    
     justify-content: center;
     align-content: center;
     gap: 1rem;
+    height: 480px;
 
     & h3{
         font-size: 1.5rem;
