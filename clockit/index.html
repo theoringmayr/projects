@@ -9,156 +9,84 @@
   <body>
     <!-- Top controls -->
     <section class="top-controls">
-      <button popovertarget="addPopover">Add</button>
-      <dialog id="addPopover" popover>
-        <h3>Add a new shift</h3>
-        <p>
-          This is where the user can manually add a shift if they miss a day.
-        </p>
-      </dialog>
+      <button popovertarget="addDialog" id="addShiftButton">Add shift</button>
+      <dialog id="addDialog" popover>
+        <div>
+          <form id="shiftForm">
+            <div>
+              <h3>Add a new shift</h3>
+              <label>
+                <h4>Date</h4>
+                <input type="date" id="dateInput" />
+              </label>
 
-      <button>Download</button>
+              <label>
+                <h4>Start</h4>
+                <input type="time" id="startInput" />
+              </label>
+
+              <label>
+                <h4>End</h4>
+                <input type="time" id="endInput" />
+              </label>
+
+              <button type="submit" id="addShiftButton" class="primary-btn">
+                Add shift
+              </button>
+            </div>
+          </form>
+
+          <div id="confirmation" style="display: none">
+            <div>
+              <h3 id="confirmationTitle">Shift logged!</h3>
+              <div id="confirmationCard">
+                <h4 id="confirmationDuration"></h4>
+                <p id="confirmationDate"></p>
+                <p id="confirmationTimes"></p>
+              </div>
+              <button id="resetBtn" class="primary-btn">
+                Log another shift
+              </button>
+              <button id="confirmationCloseButton" class="secondary-btn">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </dialog>
     </section>
 
     <!-- Status + Nav card -->
-
     <section>
       <div class="status-card">
         <div class="status">
           <p id="dateTime">Monday, 12 May, 10:28</p>
           <h2 class="status-title">No shift active currently.</h2>
         </div>
-        <button id="clockButton">Start shift</button>
+        <button id="clockButton" class="primary-btn">Start shift</button>
       </div>
     </section>
 
     <!-- Table section -->
     <section id="shift-log">
-      <div class="table-heading">
-        <h2>May 2025</h2>
-      </div>
+      <div>
+        <div class="table-heading">
+          <h2>May 2025</h2>
+        </div>
 
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Start</th>
-              <th>End</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mon 12. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Sunday 11. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Friday 9. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Thursday 8. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Wednesday 7. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Tuesday 6. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Mon 12. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Sunday 11. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Friday 9. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Thursday 8. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Wednesday 7. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Tuesday 6. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Mon 12. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Sunday 11. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Friday 9. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Thursday 8. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Wednesday 7. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-            <tr>
-              <td>Tuesday 6. May</td>
-              <td>10:28</td>
-              <td>14:00</td>
-              <td>03:50</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </section>
 
