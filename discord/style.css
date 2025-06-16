@@ -16,7 +16,7 @@ html{
 }
 
 body {
-  font-family: DM Sans, sans-serif, system-ui;
+  font-family: DM Sans, system-ui;
   line-height: 1.5;
   font-feature-settings: 'ss02', 'ss03', 'ss05';
 }
@@ -34,7 +34,7 @@ h2{
 
 
 h1, h2, h3{
-    font-family: Hubot, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Hubot, system-ui, -apple-system;
     text-transform: uppercase;
     font-weight: 900;
     font-stretch: expanded;
@@ -97,7 +97,7 @@ section{
 section:last-of-type{
     background: orangered;
     background: radial-gradient(circle at 50% 200%, var(--blue), canvas);
-    background: linear-gradient(to top, var(--blue), canvas);
+    background: linear-gradient(canvas,var(--blue), orangered);
 }
 
 section.hero{
@@ -159,6 +159,11 @@ section.quad{
         padding: 3rem;
         background: var(--light);
         border-radius: 3rem;
+    }
+
+    & .card:hover{
+        cursor: pointer;
+        background: linear-gradient(to top, var(--blue), var(--purple));
     }
 
     h3{
