@@ -283,6 +283,10 @@ footer{
 
     transition: all 0.2s;
 
+    @media (max-width: 768px) {
+        aspect-ratio: 1;
+    }
+
 }
 
 .swiper-slide:active{
