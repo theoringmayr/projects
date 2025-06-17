@@ -22,12 +22,12 @@ body {
 }
 
 h1{
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1;
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 1;
     text-wrap: pretty;
 }
@@ -97,7 +97,7 @@ section{
 section:last-of-type{
     background: orangered;
     background: radial-gradient(circle at 50% 200%, var(--blue), canvas);
-    background: linear-gradient(canvas,var(--blue), orangered);
+    background: linear-gradient(transparent, var(--blue));
 }
 
 section.hero{
@@ -260,4 +260,48 @@ footer{
     }
 }
 
+}
+
+
+/* SWIPER */
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide{
+    background: var(--purple);
+    aspect-ratio: 3 / 2;
+    border-radius: 3rem;
+
+    width: 75% !important;
+    display: grid !important;
+    place-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: grab;
+
+    transition: all 0.2s;
+
+}
+
+.swiper-slide:active{
+    cursor: grabbing;   
+}
+
+section.slider{
+    padding-inline: 0;
+
+    & > div {
+        display: grid;
+        gap: 4rem;
+    }
+
+}
+
+.swiper-slide-active{
+}
+
+.swiper-slide:not(.swiper-slide-active){
+    transform: scale(0.9) !important;
 }
