@@ -97,12 +97,30 @@
         </p>
       </section>
       <section>
-        <h2>Sample Content</h2>
+        <h2>Picture. Defaults to 400px. when smaller than 600px</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
           mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor
           neque eu tellus rhoncus ut eleifend nibh porttitor.
         </p>
+        <picture>
+          <source
+            media="(min-width: 600px)"
+            srcset="
+              https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format
+            "
+          />
+          <source
+            srcset="
+              https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format
+            "
+          />
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format"
+            alt="Laptop with code on screen (responsive)"
+            style="max-width: 100%; border-radius: 8px; margin: 1rem 0"
+          />
+        </picture>
         <p>
           Ut in nulla enim. Phasellus molestie magna non est bibendum non
           venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
