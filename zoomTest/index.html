@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Responsive Site</title>
     <style>
+      * {
+        box-sizing: border-box;
+      }
       /* Base styles */
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -52,7 +55,13 @@
         border-radius: 8px;
         margin: 1rem 0;
         width: 100%;
+        display: block;
+
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        border: 4px solid orangered;
       }
+
       .image-aspect-box {
         aspect-ratio: 1;
         width: 100%;
@@ -88,10 +97,8 @@
           readability on all devices.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format"
+          src="https://media.angi.com/s3fs-public/repairing-solar-panel.jpg?impolicy=leadImage"
           alt="Laptop with code on screen"
-          height="200px"
-          width="300px"
         />
         <div class="image-aspect-box"></div>
         <p>
