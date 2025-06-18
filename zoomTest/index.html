@@ -51,6 +51,7 @@
         height: auto;
         border-radius: 8px;
         margin: 1rem 0;
+        width: 100%;
       }
       .image-aspect-box {
         aspect-ratio: 1;
@@ -80,7 +81,7 @@
         <p>A responsive one-page demo with dummy content and images.</p>
       </header>
       <section>
-        <h2>About This Site</h2>
+        <h2>Image with Declared Size and Responsive Styling</h2>
         <p>
           This is a simple, responsive one-page website. It uses locally
           installed fonts and a minimum font size of 16px for optimal
@@ -89,6 +90,8 @@
         <img
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format"
           alt="Laptop with code on screen"
+          height="200px"
+          width="300px"
         />
         <div class="image-aspect-box"></div>
         <p>
@@ -103,24 +106,7 @@
           mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor
           neque eu tellus rhoncus ut eleifend nibh porttitor.
         </p>
-        <picture>
-          <source
-            media="(min-width: 600px)"
-            srcset="
-              https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format
-            "
-          />
-          <source
-            srcset="
-              https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format
-            "
-          />
-          <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&auto=format"
-            alt="Laptop with code on screen (responsive)"
-            style="max-width: 100%; border-radius: 8px; margin: 1rem 0"
-          />
-        </picture>
+
         <p>
           Ut in nulla enim. Phasellus molestie magna non est bibendum non
           venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
