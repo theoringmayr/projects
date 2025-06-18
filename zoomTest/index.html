@@ -19,7 +19,7 @@
       /* Layout */
       .container {
         max-width: 800px;
-        margin: 0 auto;
+        margin: 2rem auto;
         padding: 2rem;
         background: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -46,10 +46,17 @@
         color: #7f8c8d;
         font-size: 0.9rem;
       }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
       /* Responsive adjustments */
       @media (max-width: 600px) {
         .container {
           padding: 1rem;
+          margin: 1rem auto;
         }
         h1 {
           font-size: 1.5rem;
@@ -61,14 +68,22 @@
     <div class="container">
       <header>
         <h1>Welcome to My Simple Site</h1>
-        <p>A responsive one-page demo with dummy content.</p>
+        <p>A responsive one-page demo with dummy content and an image.</p>
       </header>
       <section>
         <h2>About This Site</h2>
         <p>
           This is a simple, responsive one-page website. It uses locally
           installed fonts and a minimum font size of 16px for optimal
-          readability on all devices.
+          readability on all devices[2][3][4].
+        </p>
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format"
+          alt="Laptop with code on screen"
+        />
+        <p>
+          Above is a placeholder image. You can replace it with any image you
+          like.
         </p>
       </section>
       <section>
