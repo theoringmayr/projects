@@ -10,19 +10,23 @@
       * {
         box-sizing: border-box;
         max-height: 1000000px;
+        margin: 0;
+        padding: 0;
       }
 
       html {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif;
+        font-size: 16px;
+        margin-inline: 1rem;
       }
 
-      div {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding-inline: 1.5rem;
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 2lh;
+        margin-bottom: 1lh;
       }
 
       img {
@@ -31,29 +35,49 @@
         display: block;
         border-radius: 1.5rem;
       }
+
+      .wrap {
+        position: relative;
+        aspect-ratio: 1;
+        width: 100%;
+        height: auto;
+        overflow: clip;
+
+        & > img {
+          position: absolute;
+          inset: 0;
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
     </style>
-    <div>
-      <link
-        rel="preload"
-        as="image"
-        href="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
-      />
+
+    <p>Regular Image</p>
+    <img
+      src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
+      alt=""
+    />
+
+    <p>Div wrapped image</p>
+    <div class="">
       <img
-        src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
+        src="https://cdn.prod.website-files.com/66fc4a00d70e086034b6699f/67298ecbd898c1b53a6c9899_spellbook-feature-illustration-1.webp"
+        loading="lazy"
+        sizes="100vw"
+        srcset="
+          https://cdn.prod.website-files.com/66fc4a00d70e086034b6699f/67298ecbd898c1b53a6c9899_spellbook-feature-illustration-1-p-500.webp  500w,
+          https://cdn.prod.website-files.com/66fc4a00d70e086034b6699f/67298ecbd898c1b53a6c9899_spellbook-feature-illustration-1-p-800.webp  800w,
+          https://cdn.prod.website-files.com/66fc4a00d70e086034b6699f/67298ecbd898c1b53a6c9899_spellbook-feature-illustration-1.webp       1302w
+        "
         alt=""
+        class="u-img-cover u-d-show-xs"
+        style="opacity: 1"
       />
-      <img
-        src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
-        alt=""
-      />
-      <img
-        src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
-        alt=""
-      />
-      <img
-        src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
-        alt=""
-      />
+    </div>
+
+    <p>Div wrap and position absolute</p>
+    <div class="wrap">
       <img
         src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
         alt=""
