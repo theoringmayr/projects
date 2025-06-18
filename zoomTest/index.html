@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Site</title>
+    <style>
+      /* Base styles */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      /* Layout */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      h1 {
+        color: #2c3e50;
+        font-size: 2rem;
+        margin: 0;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        color: #7f8c8d;
+        font-size: 0.9rem;
+      }
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .container {
+          padding: 1rem;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to My Simple Site</h1>
+        <p>A responsive one-page demo with dummy content.</p>
+      </header>
+      <section>
+        <h2>About This Site</h2>
+        <p>
+          This is a simple, responsive one-page website. It uses locally
+          installed fonts and a minimum font size of 16px for optimal
+          readability on all devices.
+        </p>
+      </section>
+      <section>
+        <h2>Sample Content</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
+          mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor
+          neque eu tellus rhoncus ut eleifend nibh porttitor.
+        </p>
+        <p>
+          Ut in nulla enim. Phasellus molestie magna non est bibendum non
+          venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
+          Mauris iaculis porttitor posuere.
+        </p>
+      </section>
+      <footer>
+        <p>© 2025 Simple Responsive Site</p>
+      </footer>
+    </div>
+  </body>
+</html>
