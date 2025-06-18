@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 html{
     color-scheme: dark;
@@ -102,7 +103,7 @@ section:last-of-type{
 
 section.hero{
 
-    background: radial-gradient(circle at 50% -50%, var(--purple), canvas);
+    background: radial-gradient(circle at 50% -50%, orangered, canvas);
 
     & > div {
         display: grid;
