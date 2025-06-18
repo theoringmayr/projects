@@ -52,6 +52,15 @@
         border-radius: 8px;
         margin: 1rem 0;
       }
+      .image-aspect-box {
+        aspect-ratio: 1;
+        width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format");
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
       /* Responsive adjustments */
       @media (max-width: 600px) {
         .container {
@@ -68,19 +77,20 @@
     <div class="container">
       <header>
         <h1>Welcome to My Simple Site</h1>
-        <p>A responsive one-page demo with dummy content and an image.</p>
+        <p>A responsive one-page demo with dummy content and images.</p>
       </header>
       <section>
         <h2>About This Site</h2>
         <p>
           This is a simple, responsive one-page website. It uses locally
           installed fonts and a minimum font size of 16px for optimal
-          readability on all devices[2][3][4].
+          readability on all devices.
         </p>
         <img
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format"
           alt="Laptop with code on screen"
         />
+        <div class="image-aspect-box"></div>
         <p>
           Above is a placeholder image. You can replace it with any image you
           like.
