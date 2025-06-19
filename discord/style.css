@@ -51,7 +51,7 @@ a{
 p{
     font-size: 1.25rem;
     line-height: 1.5;
-    display: none;
+    
 }
 
 ul{
@@ -98,7 +98,7 @@ main{
     margin-top: 5rem;
 
     section{
-        max-width: 800px;
+        
         width: 100%;
         margin-inline: auto;
         padding: 0;
@@ -120,11 +120,11 @@ main{
     justify-items: center;
 
     h2{
-        max-width: 15ch;
+       
     }
 
     p{
-        max-width: 50ch;
+     
     }
 }
 
@@ -151,7 +151,7 @@ section.hero{
     }
 
     p{
-        max-width: 40ch;
+       
     }
 
     .keyvisual{
@@ -372,7 +372,7 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: var(--purple);
+    background: darkred;
    
  
     
