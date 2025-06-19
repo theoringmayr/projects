@@ -370,8 +370,8 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: var(--purple);
-    max-width: unset;
+    background: #333;
+ 
     
     padding-block: 5rem;
 
