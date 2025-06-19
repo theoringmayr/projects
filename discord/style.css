@@ -14,13 +14,14 @@
 html{
     color-scheme: dark;
     font-smoothing: antialiased;
-    font-size: 100%;
+    
 }
 
 body {
   font-family: DM Sans, system-ui;
   line-height: 1.5;
   font-feature-settings: 'ss02', 'ss03', 'ss05';
+  font-size: 100%;
 }
 
 h1{
@@ -370,14 +371,12 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: #333;
+    background: var(--purple);
  
     
     padding-block: 5rem;
 
     & > div{
-        display: grid;
-        max-width: 1280px;
         width: 100%;
         margin-inline: auto;
     }
