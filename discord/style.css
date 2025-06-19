@@ -391,3 +391,7 @@ section.slider{
         margin-bottom: 3rem;
     }
 }
+
+.margin{
+    margin-inline: 3rem !important;
+}
