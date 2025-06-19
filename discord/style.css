@@ -51,6 +51,7 @@ a{
 p{
     font-size: 1.25rem;
     line-height: 1.5;
+    display: none;
 }
 
 ul{
@@ -371,8 +372,8 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: var(--blue);
-    border: 2px solid orangered;
+    background: var(--purple);
+   
  
     
     padding-block: 5rem;
@@ -384,7 +385,7 @@ section.slider{
 
     .textStuff{
         
-        max-width: 80%;
+    
         text-align: center;
         margin-inline: auto;
         margin-bottom: 3rem;
