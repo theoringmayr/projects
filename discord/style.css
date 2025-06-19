@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  touch-action: manipulation;
+  
 }
 html{
     color-scheme: dark;
@@ -61,13 +61,11 @@ img{
     height: auto;
     touch-action: manipulation;
     -ms-touch-action: manipulation;
-    border: 4px solid orangered;
+    border: 8px solid var(--purple);
+    border-radius: 1.5rem;
 }
 
-img, * {
-    touch-action: manipulation;
-    -ms-touch-action: manipulation;
-}
+
 
 .btn{
     padding: 1rem 2rem;
@@ -85,6 +83,32 @@ nav, section, footer{
 nav{
     position: sticky;
     display: none
+}
+
+main{
+    display: none;
+}
+
+.contain{
+    display: grid;
+    gap: 5rem;
+    margin-inline: 1.5rem;
+    margin-top: 5rem;
+
+    section{
+        max-width: 800px;
+        width: 100%;
+        margin-inline: auto;
+        padding: 0;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    p{
+        margin-block: 1lh;
+    }
 }
 
 .textblock{
@@ -105,15 +129,15 @@ nav{
 
 /* SECTIONS */
 
-section{
+/* section{
     padding-block: 12vw !important;
-}
+} */
 
-section:last-of-type{
+/* section:last-of-type{
     background: orangered;
     background: radial-gradient(circle at 50% 200%, var(--blue), canvas);
     background: linear-gradient(transparent, var(--blue));
-}
+} */
 
 section.hero{
 
@@ -232,6 +256,11 @@ footer{
         font-weight: 500;
         opacity: 0.5;
     }
+
+    .controls img {
+        
+        width: 3rem;
+    }
 }
 
 
@@ -268,10 +297,6 @@ footer{
 
     .controls{
         grid-column: span 4;
-
-        img{
-            width: 3rem;
-        }
     }
 
     ul{
@@ -327,4 +352,41 @@ section.slider{
 
 .swiper-slide:not(.swiper-slide-active){
     transform: scale(0.9) !important;
+}
+
+.outerPaddingAndDivs{
+    background: #333;
+    display: grid;
+    gap: 2lh;
+
+    & > div {
+        display: grid;
+        gap: 1lh;
+    }
+
+    p{
+        margin: 0;
+    }
+}
+
+.contain .fullWidth{
+    background: var(--purple);
+    max-width: unset;
+    
+    padding-block: 5rem;
+
+    & > div{
+        display: grid;
+        max-width: 1280px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .textStuff{
+        display: grid;
+        max-width: 60ch;
+        text-align: center;
+        margin-inline: auto;
+        margin-bottom: 3rem;
+    }
 }
