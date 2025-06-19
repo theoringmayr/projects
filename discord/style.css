@@ -371,7 +371,7 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: green;
+    background: var(--purple);
  
     
     padding-block: 5rem;
@@ -383,9 +383,9 @@ section.slider{
 
     .textStuff{
         
-        /* max-width: 60ch;
+        /* max-width: 60ch; */
         text-align: center;
         margin-inline: auto;
-        margin-bottom: 3rem; */
+        margin-bottom: 3rem;
     }
 }
