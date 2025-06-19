@@ -55,10 +55,10 @@
         height: auto;
         border-radius: 8px;
         margin: 1rem 0;
-        width: 100%;
+        /* width: 100%;
         vertical-align: top;
         max-height: 1000000px;
-        font-size: 16px;
+        font-size: 16px; */
       }
 
       .image-aspect-box {
@@ -80,6 +80,11 @@
       div {
         touch-action: manipulation;
         background: palegoldenrod;
+      }
+
+      img.no-touch {
+        border: 8px solid orangered;
+        /* touch-action: unset; */
       }
 
       /* Responsive adjustments */
@@ -107,6 +112,11 @@
           installed fonts and a minimum font size of 16px for optimal
           readability on all devices.
         </p>
+        <img
+          class="no-touch"
+          src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
+          alt=""
+        />
         <img
           src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
           alt=""
