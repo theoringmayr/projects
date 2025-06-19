@@ -371,7 +371,7 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: orangered;
+    background: var(--blue);
  
     
     padding-block: 5rem;
@@ -383,7 +383,7 @@ section.slider{
 
     .textStuff{
         
-        max-width: 60ch;
+        max-width: 600px;
         text-align: center;
         margin-inline: auto;
         margin-bottom: 3rem;
