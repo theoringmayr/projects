@@ -372,7 +372,7 @@ section.slider{
 }
 
 .contain .fullWidth{
-    background: darkred;
+    background: green;
    
  
     
@@ -393,5 +393,5 @@ section.slider{
 }
 
 .margin{
-    margin-inline: 3rem !important;
+    padding-inline: 3rem !important;
 }
