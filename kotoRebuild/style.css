@@ -78,6 +78,7 @@ img{
 .test > div{
     padding-inline: 1.5rem;
     padding-block: 2.5rem;
+    background: orangered;
 
     @media (min-width: 768px){
         padding-inline: 2.5rem;
