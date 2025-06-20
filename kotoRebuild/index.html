@@ -33,6 +33,7 @@
         <div class="module-media">
           <div class="container">
             <img
+              loading="lazy"
               src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
               alt=""
             />
@@ -45,12 +46,14 @@
             <div class="two-cols">
               <div>
                 <img
+                  loading="lazy"
                   src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/07c_Discord_Typography.jpg"
                   alt=""
                 />
               </div>
               <div>
                 <img
+                  loading="lazy"
                   src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/07c_Discord_Typography.jpg"
                   alt=""
                 />
@@ -63,6 +66,7 @@
           <div class="container">
             <div class="full-img">
               <img
+                loading="lazy"
                 src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
                 alt=""
               />
@@ -90,6 +94,7 @@
             <div class="triple-img">
               <div class="full-img">
                 <img
+                  loading="lazy"
                   src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
                   alt=""
                 />
@@ -97,6 +102,7 @@
 
               <div class="full-img">
                 <img
+                  loading="lazy"
                   src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
                   alt=""
                 />
@@ -104,6 +110,7 @@
 
               <div>
                 <img
+                  loading="lazy"
                   src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/07c_Discord_Typography.jpg"
                   alt=""
                 />
@@ -131,6 +138,7 @@
           <div class="container">
             <div class="full-img">
               <img
+                loading="lazy"
                 src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
                 alt=""
               />
@@ -142,6 +150,7 @@
           <div class="container">
             <div class="full-img">
               <img
+                loading="lazy"
                 src="https://kotoprod.wpengine.com/wp-content/uploads/2022/10/01_Discord_Logo.png"
                 alt=""
               />
@@ -150,5 +159,23 @@
         </div>
       </div>
     </main>
+
+    <script>
+      const images = document.querySelectorAll("img");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            console.log("img faded in");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      images.forEach((img) => {
+        observer.observe(img);
+      });
+    </script>
   </body>
 </html>
