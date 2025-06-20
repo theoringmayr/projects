@@ -1,0 +1,151 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    color-scheme: dark;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: DM Sans, system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-size: 100%;
+  font-feature-settings: 'ss02', 'ss03', 'ss05';
+}
+
+/* MOBILE FIRST + Basic styles*/
+
+p{
+    font-size: 1.125rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #999;
+    
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-meta{
+    text-transform: uppercase;
+    opacity: 0.5;
+    display: grid;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 0.875rem;
+   
+}
+
+
+main, .modules{
+    display: grid;
+    gap: 1rem;
+}
+
+main{
+    margin-bottom: 4rem;
+    margin-top: 5vw;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+.container{
+    width: 100%;
+    padding-inline: 1.5rem;
+    
+    margin-inline: auto;
+}
+
+
+.hero-grid{
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.two-cols{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.triple-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "one two" "three two";
+    gap: 1rem;
+
+    & > :nth-child(1){
+        
+        grid-area: three;
+    }
+
+    & > :nth-child(2){
+        
+        grid-area: one;
+    }
+
+    & > :nth-child(3){
+      
+
+        grid-area: two;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.textblock{
+    padding-block: 2.5rem;
+}
+/* HERO */
+
+/* Screens Larger than 768px */
+@media (min-width: 768px){
+
+    main, .modules, .two-cols, .triple-img {
+        gap: 1.5rem;
+    }
+
+    .container{
+        max-width: 1440px;
+        padding-inline: 2.5rem;
+    }
+
+    .hero-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .textblock{
+        padding-block: 4rem;
+
+
+        & > div{
+           
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+    }
+
+}
