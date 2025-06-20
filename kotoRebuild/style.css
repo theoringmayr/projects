@@ -65,6 +65,7 @@ img{
     height: auto;
     display: block;
     border-radius: 1rem;
+    touch-action: manipulation;
 }
 
 .container{
@@ -74,6 +75,15 @@ img{
     margin-inline: auto;
 }
 
+.test > div{
+    padding-inline: 1.5rem;
+    padding-block: 2.5rem;
+
+    @media (min-width: 768px){
+        padding-inline: 2.5rem;
+        padding-block: 4rem;
+    }
+}
 
 .hero-grid{
     display: grid;
