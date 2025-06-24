@@ -1,0 +1,236 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition-timing-function: linear(0, 0.115 2.2%, 0.877 9.4%, 1.016 11.9%, 1.081 14.7%, 1.088 16%, 1.084 17.5%, 1.013 25.3%, 0.993 30.8%, 1.001 46.8%, 1);;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 8rem 3rem;
+    background: orange;
+
+    & > div {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+}
+
+.bento{
+
+    & > div {
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  repeat(6, 1fr);
+    gap: 1.5rem;
+}
+
+    & .container > * {
+        border-radius: 1.5rem;
+        overflow: clip;
+    }
+
+    }
+
+
+.bentoCard{
+    position: relative;
+   color: white;
+   display: grid;
+   align-content: end;
+   isolation: isolate;
+
+   grid-row: span 2 ;
+
+   & .title{
+    padding: 1.5rem;
+    position: relative;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+   }
+
+
+   .title h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.125;
+    margin-bottom: 0;
+    transition: margin 0.3s ease-out;
+   }
+
+   .background{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+   }    
+
+   .gradient{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, black, transparent);
+    z-index: -1;
+   }
+}
+
+ .arrow{
+        background: orangered;
+        height: 2.25rem;
+        width: 2.25rem;
+        display: grid;
+        place-content: center;
+        border-radius: 1200px;
+        visibility: hidden;
+        margin-bottom: -1.5rem;
+        position: absolute;
+        opacity: 0;
+        transition: margin 0.3s ease-out, opacity 0.3s ease-out ;
+        
+
+        & svg{
+            height: 1.25rem;
+            width: auto;
+        }
+    }
+
+.bentoImg{
+    grid-column: 2/3;
+    grid-row: span 3;
+    
+    background: red;
+
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.bentoCard:hover, .bentoCard:focus-within{
+
+    outline: 8px solid teal;
+    outline-offset: 0;
+
+    & .title h3{
+        margin-bottom: 2.75rem;
+    }
+
+    .arrow{
+        visibility: visible;
+        margin-bottom: 0;
+        opacity: 1;
+    }
+
+}
+
+.bentoCard:nth-of-type(1){
+   
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.bentoCard:nth-of-type(2){
+ 
+    grid-column: 1 / 2;
+    grid-row: 3 / 5 ;
+}
+
+.bentoCard:nth-of-type(3){
+    
+    grid-column: 1 / 2;
+    grid-row: 5 / 7 ;
+}
+
+.bentoCard:nth-of-type(4){
+    grid-column: 2 / 3;
+    
+    grid-row: 4 / -1;
+}
+
+.bentoCard:nth-of-type(5){
+    grid-column: 3 / 4;
+    grid-row: 1 / 3 ;
+}
+   
+
+
+.bentoCard:nth-of-type(6){
+     grid-column: 3 / 4;
+    grid-row: 3 / 5 ;
+ 
+}
+
+.bentoCard:nth-of-type(7){
+    
+      grid-column: 3 / 4;
+    grid-row: 5 / 7 ;
+}
+
+@media (max-width: 960px) {
+
+    section{
+        padding-inline: 0;
+        padding-block: 3rem;
+        height: 100vh;
+        width: 100vw;
+        
+     
+    }
+
+    .bento > div {
+     
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 300px;
+        gap: 1rem;
+
+        overflow-x: scroll;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 1rem;
+        padding-inline: 1rem; 
+        padding-block: 0.5rem;
+    }
+
+    .bentoCard, .bentoImg{
+        grid-column: unset !important;
+        grid-row: unset !important;
+        height: 400px;
+        scroll-snap-align: start;
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 4/5;
+        
+    }
+}
