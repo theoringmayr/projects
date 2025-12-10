@@ -10,7 +10,7 @@
   }
 }
 html{
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans 3', system-ui, sans-serif;
     font-feature-settings: 'ss04';
 }
 
