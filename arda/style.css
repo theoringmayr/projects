@@ -81,7 +81,7 @@ nav{
         background: rgba(255, 255, 255, 0.8);
         padding: 1rem;
         border-radius: 1000px;
-        backdrop-filter: blur(1rem);
+        backdrop-filter: blur(3rem);
     }
 
     #email{
@@ -104,7 +104,7 @@ nav{
     #profile-image{
         height: 2.5rem;
         width: 2.5rem;
-        background: white;
+        background: violet;
         border-radius: 1200px;
     }
 }
