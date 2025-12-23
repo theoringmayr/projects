@@ -51,6 +51,7 @@ nav{
     background: white;
     z-index: 1000;
     padding: 1.5rem;
+    display: none;
 
     #logo{
         font-weight: 600;
@@ -90,13 +91,13 @@ section{
 }
 
 .hero{
-    background: gold;
+    background: steelblue;
     display: grid;
     place-content: center;
     text-align: center;
     padding-block: 8rem;
     height: max-content;
-    height: 80svh;
+    height: 100svh;
     position: relative;
     
     h1{
