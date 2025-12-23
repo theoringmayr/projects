@@ -90,12 +90,13 @@ section{
 }
 
 .hero{
-    background: whitesmoke;
+    background: gold;
     display: grid;
     place-content: center;
     text-align: center;
     padding-block: 8rem;
-    min-height: 80svh;
+    height: max-content;
+    height: 80svh;
     position: relative;
     
     h1{
@@ -107,13 +108,15 @@ section{
 }
 
 .filler{
-    min-height: 100svh;
+    height: max-content;
+    height: 100svh;
     padding-block: 5rem;
+    background: violet;
 
 }
 
 section.filler{
-    background: lavender;
+    background: gold;
 }
 
 .filler h2{
