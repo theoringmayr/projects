@@ -137,6 +137,10 @@ label span{
 /* NAV */
 nav{
     padding: 1.5rem;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to bottom, black, transparent);
 
 
     & > div{
@@ -155,7 +159,7 @@ nav{
         text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
 
-    height: 2rem;
+    height: 3rem;
     width: auto;
 
     }
@@ -168,7 +172,7 @@ nav{
     #menuToggle{
         text-transform: uppercase;
         font-stretch: expanded;
-        font-weight: 700;
+        font-weight: 800;
         padding: unset;
 
     }
@@ -176,53 +180,27 @@ nav{
     ul li{
         text-transform: uppercase;
         font-stretch: expanded;
-        font-weight: 700;
+        font-weight: 900;
+        font-size: 2rem;
         
     }
 
     & #menu{
         background: var(--brand-color);
+        
         border: none;
         width: 100vw;
         height: 100svh;
+        
+        inset: unset;
+        right: 0;
     }
 
 
 }
 
-@media (min-width: 960px) {
-    
-    h1, h2{
-         font-size: 4rem;
-    }
-    p{
-        font-size: 1.375rem;
-    }
-
-    #menuToggle{
-        display: none;
-    }
-
-    nav #menu{
-        display: block;
-        position: static !important;
-        height: auto;
-        width: auto;
-        background: transparent;
-        padding: unset;
-       
-        & ul{
-            display: flex;
-            gap: 2rem;
-        }
-    
-    }
-
-    nav #menu[popover]:open{
-        inset: auto;
-        font-style: italic;
-    }
-
+hmtl:has(#menu:popover-open), body:has(#menu:popover-open){
+    overflow: hidden;
 }
 
 
@@ -286,54 +264,6 @@ section{
             opacity: .75;
         }
     }
-}
-
-/* REVIEWS */
-.socialproof{
-
-  
-    & > div{
-
-    }
-
-    .slider{
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 300px;
-        gap: 1.5rem;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-    }
-
-    .stars{
-        display: none;
-    }
-
-    .review{
-        padding: 1.5rem;
-        background: white;
-        color: black;
-        display: grid;
-        gap: 1rem;
-        align-content: space-between;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-      
-
-        .quote{
-            line-height: 1.5;
-            font-size: 1.125rem;
-        }
-
-        .name{
-            text-transform: uppercase;
-            font-stretch: expanded;
-            font-weight: 800;
-            font-size: .875rem;
-        }
-    }
-
 }
 
 .date{
