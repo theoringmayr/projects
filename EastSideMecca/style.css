@@ -9,7 +9,7 @@
 
 :root{
     --main-font: "MonaSans";
-    --mono: Azeret Mono;
+    --mono: Azeret Mono, monospace;
     --brand-color: #FC372D;
 }
 
@@ -47,8 +47,8 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 p {
-    font-size: 1.375rem;
-    line-height: 1.75;
+    font-size: 1.125rem;
+    line-height: 1.5;
   text-wrap: pretty;
 }
 
@@ -60,7 +60,7 @@ h1, h2{
     text-transform: uppercase;
     font-weight: 900;
     font-stretch: 125%;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1;
 }
 
@@ -79,6 +79,7 @@ button{
     border: unset;
     background: unset;
     cursor: pointer;
+    color: inherit;
     
 }
 
@@ -191,6 +192,12 @@ nav{
 
 @media (min-width: 960px) {
     
+    h1, h2{
+         font-size: 4rem;
+    }
+    p{
+        font-size: 1.375rem;
+    }
 
     #menuToggle{
         display: none;
@@ -327,4 +334,8 @@ section{
         }
     }
 
+}
+
+.date{
+    display: none;
 }
