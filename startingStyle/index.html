@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starting Style</title>
+  </head>
+  <body>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          interpolate-size: allow-keywords;
+        }
+      }
+      html {
+        font-family: Inter variable, system-ui, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+          "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+      p {
+        text-wrap: pretty;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+
+      #toggle {
+        border: unset;
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        line-height: 1;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        background: lavender;
+        anchor-name: --linksButton;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding-right: 1.5rem;
+
+        .icon svg {
+          height: 100%;
+          width: 100%;
+        }
+
+        .icon {
+          position: relative;
+          order: 2;
+          height: 1.125rem;
+          width: 1.125rem;
+
+          transition: transform 500ms ease-in;
+          transition-timing-function: linear(
+            0,
+            0.029 1.6%,
+            0.123 3.5%,
+            0.651 10.6%,
+            0.862 14.1%,
+            1.002 17.7%,
+            1.046 19.6%,
+            1.074 21.6%,
+            1.087 23.9%,
+            1.086 26.6%,
+            1.014 38.5%,
+            0.994 46.3%,
+            1
+          );
+        }
+      }
+
+      aside:has(:popover-open) #toggle .icon {
+        transform: rotate(-45deg);
+      }
+
+      #links:popover-open {
+        opacity: 1;
+        @starting-style {
+          opacity: 0;
+        }
+      }
+
+      #links {
+        background: transparent;
+        padding: 0;
+        border: none;
+        inset: auto;
+        height: auto;
+        overflow: visible;
+
+        /* Fallback for Safari 17.6 */
+        position: fixed;
+        bottom: calc(1rem + 5.5rem);
+        left: 1rem;
+        width: max-content;
+        max-width: min(20rem, 90vw);
+
+        /* Anchor positioning */
+        position-anchor: --linksButton;
+        position: absolute;
+        bottom: anchor(top);
+        left: anchor(left);
+        margin-bottom: 0.5rem;
+
+        opacity: 0;
+        transition-behavior: allow-discrete;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          display: grid;
+          gap: 0.5rem;
+        }
+
+        & li a {
+          padding: 1rem 2rem;
+          line-height: 1;
+          display: block;
+          background: whitesmoke;
+          width: max-content;
+          border-radius: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      /* ANIMATIONS */
+      #links li {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 300ms ease, transform 300ms ease;
+        transition-delay: calc(var(--index, 0) * 50ms);
+      }
+
+      #links:popover-open li {
+        opacity: 1;
+        transform: translateY(0);
+
+        @starting-style {
+          opacity: 0;
+          transform: translateY(2rem);
+        }
+      }
+    </style>
+
+    <aside>
+      <button id="toggle" popovertarget="links">
+        <span class="icon"
+          ><svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10 3C10.4142 3 10.75 3.33579 10.75 3.75V9.25H16.25C16.6642 9.25 17 9.58579 17 10C17 10.4142 16.6642 10.75 16.25 10.75H10.75V16.25C10.75 16.6642 10.4142 17 10 17C9.58579 17 9.25 16.6642 9.25 16.25V10.75H3.75C3.33579 10.75 3 10.4142 3 10C3 9.58579 3.33579 9.25 3.75 9.25H9.25V3.75C9.25 3.33579 9.58579 3 10 3Z"
+              fill="#201F29"
+            ></path></svg></span
+        >Chapter
+      </button>
+
+      <div id="links" popover>
+        <ul>
+          <li style="--index: 5"><a href="#">Summary</a></li>
+          <li style="--index: 4"><a href="#">Challenge</a></li>
+          <li style="--index: 3"><a href="#">Process</a></li>
+          <li style="--index: 2"><a href="#">Solution</a></li>
+          <li style="--index: 1"><a href="#">Solution</a></li>
+        </ul>
+      </div>
+    </aside>
+  </body>
+</html>
