@@ -1,0 +1,170 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html{
+    font-family: Inter variable;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+section{
+    aspect-ratio: 3 / 2;
+    height: auto;
+    width: 100%;
+    background-color: lavender;
+    border-radius: 1.5rem;
+}
+
+button{
+    anchor-name: --button;
+    border: unset;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    display: grid;
+    place-content: center;
+    background: white;
+    border-radius: 1200px;
+    cursor: pointer;
+
+    border-radius: 5rem;
+    corner-shape: squircle;
+    
+    background: rgb(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
+
+    svg{
+        height: 2rem;
+        width: auto;
+    }
+}
+
+[popover] {
+  position: absolute;
+  inset: auto;
+  margin: 0;
+  transition:
+    opacity 1s ease,
+    display 1s;
+  transition-behavior: allow-discrete;
+}
+
+#menu{
+ 
+    position: fixed;
+    position-anchor: --button;
+    bottom: anchor(bottom);
+    right: anchor(right);
+
+    border-radius: 1.5rem;
+    corner-shape: squircle;
+    padding: .75rem .5rem;
+    background: rgb(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
+
+    /* ANIMATION STUFFS */                 
+    opacity: 0;
+
+    
+
+    ul{
+        display: grid;
+        gap: .25rem;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: 0.5rem .75rem;
+        
+        border-radius: .75rem;
+        corner-shape: squircle;
+        font-weight: 500;
+        transition: backgroundcolor .2s ease;
+    }
+
+    & a:hover{
+        background: rgb(0, 0, 0, 0.125);
+       
+    }
+
+    & a:active{
+       
+        transform: scale(98%);
+    }
+}
+
+#menu:hover{
+    outline: 4px solid steelblue;
+}
+
+/* OPEN STATE */
+#menu:popover-open{
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+    display: block;
+    opacity: 0;
+
+}
+}
+
+/* BACKGROUND STUFFS */
+
+section:first-of-type{
+    background: gold;
+}
+
+section:nth-of-type(2){
+    background: violet;
+}
