@@ -1,0 +1,129 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html{
+  font-family: Inter variable, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h2{
+  font-size: 2.5rem;
+  line-height: 1.125;
+  letter-spacing: -0.02em;
+}
+
+p {
+  text-wrap: pretty;
+  font-size: 1.375rem;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  font-weight: 600;
+}
+
+nav{
+  padding: 1.5rem 3rem;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  a{
+    font-weight: 500;
+  }
+}
+
+.content{
+  display: grid;
+  gap: 10rem;
+  padding-inline: 3rem;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "image text";
+    gap: 3rem;
+    max-width: 1280px;
+    margin-inline: auto;
+    
+}
+
+section:nth-of-type(odd){
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "text image";
+}
+
+.img{
+    aspect-ratio: 3 / 2;
+    background: lightgray;
+    border-radius: 1.25rem;
+    width: 100%;
+    height: auto;
+    display: block;
+   
+}
+
+.img:nth-of-type(2){
+  background: lavender;
+  aspect-ratio: 16/9;
+}
+
+.img:nth-of-type(3){
+  background: orangered;
+  aspect-ratio: 1;
+}
+
+.sticky{
+  
+   position: sticky;
+     top: 6rem;
+     display: grid;
+    gap: 1lh;
+    align-content: start;
+}
+
+
+.text{
+    margin-top: 3rem;
+    
+    grid-area: text;
+  
+}
+
+.visuals{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    grid-area: image;
+}
