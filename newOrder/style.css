@@ -382,8 +382,17 @@ footer{
 }
 
 
-@media (max-width: 1080px) {
-    html{
-        background: blueviolet;
+@media (max-width: 1140px) {
+   
+
+    *{
+        font-size: 1rem;
+    }
+
+    .content{
+     h2, p, .text{
+        grid-column: span 3;
+        
+    }
     }
 }
