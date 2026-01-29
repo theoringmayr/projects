@@ -1,0 +1,294 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html{
+    font-family: Inter variable, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+ 
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+section{
+    
+}
+
+.hero{
+
+    min-height: calc(100vh - 15rem);
+    display: grid;
+    place-content: center;
+
+    & > div{
+        display: grid;
+        gap: 1rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 3rem;
+        line-height: 1.25;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        max-width: 25ch;
+    }
+
+    p{
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #666;
+    }
+
+    .pic{
+        height: 5rem;
+        width: 5rem;
+        border-radius: 1000px;
+        background: lavender;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    & .pic::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 4px dashed #bcbcdb;
+        mix-blend-mode: multiply;
+        animation: spin 40s linear infinite ;
+    }
+}
+
+@keyframes spin {
+    to{
+        rotate: 360deg;
+    }
+    
+}
+
+.projects{
+
+    display: none;
+
+
+    & > div{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+        row-gap: 5rem;
+    }
+
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    grid-column: span 4;
+}
+
+.project .caption{
+    max-width: 40ch;
+}
+
+.project .img{
+    background: lavender;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    border-radius: 1.5rem;
+}
+
+.project:nth-of-type(1){
+    grid-column: 1 / 8;
+
+    .img{
+        background: springgreen;
+    }
+}
+
+
+.project:nth-of-type(2){
+    grid-column: 9 / -1;
+}
+
+.project:nth-of-type(3){
+    grid-column: 1 / -1;
+
+    .img{
+        background: teal;
+    }
+}
+
+
+
+/* ALT PROJECT SECTION */
+
+.projs{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.alt-project{
+  
+    & > div{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+.project-images{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    height: 480px;
+    scroll-padding-left: 6vw;
+    padding-right: 6vw;
+    position: relative;
+
+    &::before{
+        content: '';
+        display: block;
+        place-content: center;
+        height: 100%;
+        width: auto;
+        width: 400px;
+       
+    }
+
+
+
+    & > div{
+        aspect-ratio: 1;
+        height: 100%;
+        width: auto;
+        background: lavender;
+        border-radius: 1.5rem;
+        scroll-snap-align: start;
+    }
+
+    & > div:nth-child(1){
+        background: springgreen;
+        aspect-ratio: 3/2;
+    }
+
+    & > div:nth-child(3){
+        background: teal;
+        aspect-ratio: 5/6;
+    }
+
+    & > div:nth-child(5){
+        background: orangered;
+        aspect-ratio: 16/9;
+    }
+
+    & > div:nth-child(6){
+        background: blueviolet;
+        aspect-ratio: 5/6;
+    }
+}
+
+section:nth-of-type(2){
+  
+
+    .project-images{
+
+     & > div:nth-child(2){
+        background: springgreen;
+        aspect-ratio: 3/2;
+    }
+
+    & > div:nth-child(1){
+        background: teal;
+        aspect-ratio: 1;
+    }
+
+    & > div:nth-child(4){
+        background: orangered;
+        aspect-ratio: 16/9;
+    }
+
+    & > div:nth-child(3){
+        background: blueviolet;
+        aspect-ratio: 5/6;
+    }
+}
+}
+
+
+
+.project-info{
+    padding-inline: 6vw;
+    display: grid;
+    gap: 1lh;
+
+    h2{
+        font-size: 2rem;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+    }
+
+    p{
+        font-size: 1.5rem;
+        max-width: 50ch;
+    }
+}
+
+.line{
+    position: fixed;
+    width: 2px;
+    /* background: orangered; */
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 6vw;
+}
+
+
+footer{
+    padding:  6vw;
+    text-align: center;
+    font-weight: 500;
+    color: #666;
+}
