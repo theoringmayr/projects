@@ -1,7 +1,7 @@
 /* FONTS */
 @font-face {
   font-family: "InterVariable";
-  src: url("/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("./fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
   font-weight: 100 900;      /* full variable range */
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "InterTight";
-  src: url("/fonts/InterTight-VariableFont_wght.ttf") format("truetype");
+  src: url("./fonts/InterTight-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 900;      /* full variable range */
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "InterItalic";
-  src: url("/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("./fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
   font-weight: 100 900;      /* full variable range */
   font-style: italic;
   font-display: swap;
