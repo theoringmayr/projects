@@ -10,7 +10,7 @@
     <!-- RELEVANT COMPONENT CSS STYLES -->
     <style>
       html {
-        scroll-padding-top: 12rem;
+        scroll-padding-top: 15rem;
       }
 
       #catalognav {
@@ -19,6 +19,8 @@
         width: 100%;
         position: sticky;
         top: 7rem;
+        container-type: inline-size;
+        container-name: catalognav;
       }
 
       #catalognav ul {
@@ -27,8 +29,17 @@
         align-items: center;
         padding: 0;
         gap: 0.375rem;
-        overflow-x: auto;
+        row-gap: 0.5rem;
+        flex-wrap: wrap;
         padding-block: 1rem;
+      }
+
+      @container catalognav (max-width: 960px) {
+        #catalognav ul {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scrollbar-width: thin;
+        }
       }
 
       #catalognav li {
@@ -39,7 +50,7 @@
         padding: 0.5rem 1rem;
         padding-left: 0.5rem;
         border: 1px solid lightgray;
-        border-radius: 1000px;
+
         line-height: 1;
         font-weight: 500;
         display: block;
@@ -50,10 +61,10 @@
 
         &::before {
           content: "";
-          height: 1.125em;
-          width: 1.125em;
+          height: 1em;
+          width: 1em;
           background: orangered;
-          border-radius: 1000px;
+
           display: grid;
           place-content: center;
         }
@@ -67,6 +78,11 @@
         #catalognav {
           top: 4rem;
         }
+
+        /* #catalognav ul {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        } */
       }
     </style>
 
@@ -88,6 +104,9 @@
         <aside id="catalognav">
           <ul>
             <li>
+              <a href="#law">Gesetzestexte</a>
+            </li>
+            <li>
               <a href="#lit">Literatur</a>
             </li>
 
@@ -96,11 +115,15 @@
             </li>
 
             <li>
-              <a href="#science">Wissenschaft</a>
+              <a href="#science">Wissenschaften & Sozialwissenschaften </a>
             </li>
 
             <li>
-              <a href="#philosophy">Philosophy</a>
+              <a href="#history">Geschichte und Politik</a>
+            </li>
+
+            <li>
+              <a href="#philosophy">Philosophie</a>
             </li>
 
             <li>
@@ -153,6 +176,18 @@
 
         <div class="category">
           <h2 id="science">Wissenschaft</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="history">Geschichte und Politik</h2>
           <div class="books">
             <div class="book"></div>
             <div class="book"></div>
