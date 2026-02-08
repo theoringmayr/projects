@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Navigation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- RELEVANT COMPONENT CSS STYLES -->
+    <style>
+      html {
+        scroll-padding-top: 12rem;
+      }
+
+      #catalognav {
+        background: white;
+        z-index: 10;
+        width: 100%;
+        position: sticky;
+        top: 7rem;
+      }
+
+      #catalognav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        gap: 0.375rem;
+        overflow-x: auto;
+        padding-block: 1rem;
+      }
+
+      #catalognav li {
+        flex-shrink: 0;
+      }
+
+      #catalognav ul a {
+        padding: 0.5rem 1rem;
+        padding-left: 0.5rem;
+        border: 1px solid lightgray;
+        border-radius: 1000px;
+        line-height: 1;
+        font-weight: 500;
+        display: block;
+
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+
+        &::before {
+          content: "";
+          height: 1.125em;
+          width: 1.125em;
+          background: orangered;
+          border-radius: 1000px;
+          display: grid;
+          place-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        html {
+          scroll-padding-top: 10rem;
+        }
+
+        #catalognav {
+          top: 4rem;
+        }
+      }
+    </style>
+
+    <nav>
+      <div>
+        <a href="#">EDITION LEICHTER LESEN </a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div></div>
+    </section>
+
+    <!-- NAVIGATION COMPONENT IS IN HERE! -->
+    <section id="catalogtiles">
+      <div>
+        <!-- ADD COMPONENT BELOW INTO #CATALOGTILES > DIV -->
+
+        <aside id="catalognav">
+          <ul>
+            <li>
+              <a href="#lit">Literatur</a>
+            </li>
+
+            <li>
+              <a href="#drama">Schauspiel, Drama, Oper</a>
+            </li>
+
+            <li>
+              <a href="#science">Wissenschaft</a>
+            </li>
+
+            <li>
+              <a href="#philosophy">Philosophy</a>
+            </li>
+
+            <li>
+              <a href="#freebooks">Kostenlose Bücher</a>
+            </li>
+
+            <li>
+              <a href="#dual">Zweisprachige Ausgaben</a>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- MOCK CATALOG – FOR TESTING PURPOSES -->
+
+        <div class="category">
+          <h2 id="legal">Gesetzestexte</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="lit">Literatur</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="drama">Schauspiel, Drama, Oper</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="science">Wissenschaft</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="philosophy">Philosophy</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="freebooks">Kostenlose Bücher</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 id="dual">Zweisprachige Ausgaben</h2>
+          <div class="books">
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+            <div class="book"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content"></section>
+    <footer></footer>
+  </body>
+</html>
