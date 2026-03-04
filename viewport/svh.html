@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svh • Viewport Sizes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">vh</a>
+        </li>
+        <li>
+          <a href="svh.html">svh</a>
+        </li>
+        <li>
+          <a href="dvh.html">dvh</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero svh">
+      <div>
+        <h1>100svh</h1>
+      </div>
+    </section>
+
+    <section class="content">
+      <div>
+        <article>
+          <h1>
+            The New CSS Height Units: <code>lvh</code>, <code>svh</code>, and
+            <code>dvh</code> Explained
+          </h1>
+
+          <p>
+            For years, developers have struggled with unpredictable viewport
+            heights in mobile browsers. If you’ve ever seen a perfectly sized
+            hero section suddenly crop or jump when the address bar hides,
+            you’ve dealt with this problem firsthand. Thankfully, the CSS
+            Working Group has addressed it with
+            <strong>new height units</strong>: <code>lvh</code>,
+            <code>svh</code>, and <code>dvh</code>.
+          </p>
+
+          <h2>The Problem with <code>vh</code></h2>
+          <p>
+            The original <code>vh</code> unit (viewport height) always seemed
+            simple: <code>1vh = 1% of the viewport’s height</code>. But on
+            mobile browsers, the viewport size changes when UI elements (like
+            toolbars) appear or disappear. This leads to layout shifts when
+            scrolling — not great for user experience.
+          </p>
+
+          <h2>Meet the New Units</h2>
+          <ul>
+            <li>
+              <strong><code>lvh</code> (Large Viewport Height)</strong> — The
+              maximum possible viewport height, with all browser interfaces
+              hidden.
+            </li>
+            <li>
+              <strong><code>svh</code> (Small Viewport Height)</strong> — The
+              minimum possible viewport height, when all overlays are visible.
+            </li>
+            <li>
+              <strong><code>dvh</code> (Dynamic Viewport Height)</strong> — A
+              real-time unit that updates as the browser UI expands or collapses
+              (replaces traditional <code>vh</code> in many cases).
+            </li>
+          </ul>
+
+          <h2>How They Work in Practice</h2>
+          <pre><code>.hero {
+  height: 100dvh; /* Adapts dynamically */
+  background: linear-gradient(to bottom, #2a2a72, #009ffd);
+}</code></pre>
+
+          <p>
+            Try swapping in <code>lvh</code> or <code>svh</code> to see how your
+            layout behaves when the viewport shrinks or expands. On mobile,
+            these differences are immediately noticeable.
+          </p>
+
+          <h2>When to Use Which</h2>
+          <ul>
+            <li>
+              <strong>For full-page sections:</strong> Use <code>dvh</code> to
+              match the live viewport and prevent awkward cropping.
+            </li>
+            <li>
+              <strong>For fixed headers or footers:</strong>
+              <code>svh</code> can ensure consistent layout even when browser UI
+              is visible.
+            </li>
+            <li>
+              <strong>For immersive experiences (like PWAs):</strong>
+              <code>lvh</code> gives you the full-screen real estate when
+              browser chrome disappears.
+            </li>
+          </ul>
+
+          <h2>Browser Support</h2>
+          <p>
+            As of early 2026, these units are widely supported across modern
+            browsers, including Chrome, Safari, Firefox, and Edge. Always
+            double-check
+            <a
+              href="https://caniuse.com/mdn-css_types_length_dynamic_viewport_units"
+              target="_blank"
+              rel="noopener"
+              >Can I Use</a
+            >
+            for the latest compatibility info.
+          </p>
+
+          <p>
+            The arrival of <code>lvh</code>, <code>svh</code>, and
+            <code>dvh</code> marks a big win for responsive design. With these
+            tools, developers finally have fine-grained control over viewport
+            sizing — no more JavaScript hacks or layout jumps when scrolling.
+          </p>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
