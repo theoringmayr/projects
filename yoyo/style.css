@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Jet";
+  src: url("./fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;      /* full variable range */
+  font-style: normal;
+  font-display: swap;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -27,7 +35,7 @@ p {
   text-wrap: pretty;
 }
 h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+  
   font-weight: 600;
 }
 a{
@@ -40,11 +48,11 @@ list-style: none;
 }
 
 html{
-    font-family: Google Sans Flex;
+    font-family: Inter Variable, sans-serif;
     color: #222;
 }
 nav{
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     width: max-content;
     border: 2px solid #e5e5e5;
     border-radius: 1000px;
@@ -54,6 +62,11 @@ nav{
     transform: translateX(-50%);
     background: white;
     z-index: 100;
+ 
+    
+    width: 100%;
+    max-width: max-content;
+    
 
     #logo{
         font-weight: 900;
@@ -74,6 +87,18 @@ nav{
         align-items: center;
         gap: 2rem;
         font-weight: 500;
+        overflow-x: auto;
+    scroll-snap-type: x mandatory;
+     scrollbar-width: none;
+     padding-inline: 2rem;
+     scroll-padding-inline-start: 2rem;
+       
+      
+    }
+
+    li{
+      flex-shrink: 0;
+      scroll-snap-align: start;
     }
 }
 
@@ -87,12 +112,14 @@ nav{
 }
 
 h1{
-    font-size: 3.5rem;
-    letter-spacing: -0.01em;
+    font-size: 4.5rem;
+    letter-spacing: -0.03em;
     animation: scroll-fade;
     animation-timeline: scroll();
     animation-range-end: 400px;
     animation-fill-mode: forwards;
+    line-height: 1;
+    max-width: 20ch;
     
 }
 
@@ -103,7 +130,7 @@ h1{
 
     position: relative;
     isolation: isolate;
-    gap: 1rem;
+   
 }
 
 .center{
@@ -125,16 +152,24 @@ h1{
 
 
 }
+section{
+  padding: 1.5rem;
+}
 
 section h2{
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    font-family: 'Jet';
+    font-weight: 700;
 }
 
 .textblock{
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
+    /* animation: scroll-fade-in;
+    animation-timeline: view();    
+    animation-fill-mode: forwards; */
 }
 
 .text{
@@ -149,3 +184,34 @@ section h2{
         opacity: 0;
     }
 }
+
+@keyframes scroll-fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+/* BREAKPOINT */
+    @media screen and (max-width: 768px) {
+
+      nav{
+        width: calc(100% - 2rem);
+        max-width: unset;
+      }
+
+      h1{
+        font-size: 3rem;
+      }
+
+      section{
+        padding: 1rem;
+      }
+  
+      .text{
+        font-size: 1.5rem;
+      }
+    }
