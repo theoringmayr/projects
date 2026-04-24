@@ -53,7 +53,7 @@ html{
     color: #222;
 }
 nav{
-    padding: 1rem 0rem;
+    
     width: max-content;
     border: 2px solid #e5e5e5;
     border-radius: 1000px;
@@ -100,6 +100,7 @@ nav{
     li{
       flex-shrink: 0;
       scroll-snap-align: start;
+      display: grid;
     }
 
     li a {
@@ -165,7 +166,7 @@ section h2{
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.02em;
-    font-family: 'Jet';
+    font-family: 'Jet', monospace;
     font-weight: 700;
 }
 
