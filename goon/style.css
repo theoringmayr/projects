@@ -190,7 +190,7 @@ nav ul a{
  
 }
 .project-text .tag{
-            font-family: 'Jet';
+            font-family: 'Jet', system-ui;
             font-weight: 700;
             word-spacing: -0.03em;
             text-transform: uppercase;
@@ -338,7 +338,7 @@ footer{
         }
 
         .project-images{
-          height: 280px;
+          height: 360px;
           gap: .875rem;
         }
 
@@ -352,6 +352,7 @@ footer{
           }
            .tag{
           font-size: .75rem;
+          color: orangered;
         }
 
         }
