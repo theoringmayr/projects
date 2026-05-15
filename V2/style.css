@@ -1,0 +1,203 @@
+:root{
+    --base-font-size: 10pt;
+    --base-line-height: 15pt;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+}
+
+html{
+    font-family: SF Pro, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+}
+
+.page{
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 2lh;
+    width: 21cm;
+    height: 29.7cm;
+    padding: 3lh 1.5cm 4lh;
+    border: 1px solid;
+}
+
+
+/* BASELINE GRID */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.15) 0 1px,
+    transparent 1px var(--base-line-height)
+  );
+}
+
+/* HEADER + CONTACT */
+header{
+    h1{
+        line-height: 2lh;
+    }
+}
+
+.intro{
+    height: 3lh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 6pt;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    gap: 4pt;
+    position: relative;
+    left: -2px;
+
+    a{
+        font-weight: 400;
+        padding: 2pt 8pt;
+        border: 1px solid black;
+        border-radius: 1000px;
+        display: flex;
+        align-items: center;
+        gap: 2pt;
+    }
+}
+
+#email::before{
+    content: 'Email:';
+}
+
+#linkedIn::before{
+    content: 'LinkedIn:';
+}
+
+#portfolio::before{
+    content: 'Portfolio:';
+}
+
+.subtitle{
+    font-size: 12pt;
+    flex-shrink: 0;
+    
+    width: 100%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 7fr 7fr;
+    gap: 24pt;
+    align-content: start;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 2lh;
+}
+
+section{
+    display: grid;
+    align-content: start;
+    gap: 1lh;
+}
+
+ul{
+    padding: 0;
+    list-style-position: outside;
+}
+
+h1{
+    font-family: SF Pro Display, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24pt;
+    line-height: 1;
+    font-weight: 500;
+}
+
+h2{  
+    font-weight: 600;
+    font-size: 15pt;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5rem;
+    align-items: center;
+}
+
+h2::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: black;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.title{
+    font-family: SF Pro Display;
+    font-size: 12pt;
+    line-height: var(--base-line-height);
+    font-weight: 600;
+
+    & > span{
+        display: block;
+    }
+}
+
+
+.title.current::after{
+    content: 'Current';
+    font-weight: 500;
+    font-variant-caps: all-small-caps;
+    padding: .25em .5em;
+    border: 1px solid;
+    border-radius: 1000px;
+    font-size: var(--base-font-size);
+    line-height: 1;
+    text-box-trim: trim-end; 
+}
+
+.date{
+     font-variant-caps: all-small-caps;
+}
+
+.institution{
+    font-variant-caps: all-small-caps;
+    display: none;
+}
+
+.link-text{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* SKILLS */
+.skill-title{
+    font-weight: 600;
+    font-size: 10pt;
+}
+
+
+/* PRINT STYLES */
+
+/* Print: no grid */
+@media print {
+  .page::before { display: none; }
+}
